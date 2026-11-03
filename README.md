@@ -303,10 +303,38 @@ python-for-AI/
 │   ├── demo_before.py # 无锚点，用于 fmt/wrap 演示
 │   └── demo_move.py   # 用于 move 演示
 ├── docs/SPEC.md       # 规范：词法、位置、不变式、错误码、编辑语义
+├── bench/             # 三臂实验：任务、arms、harness、pilot 报告
+│   ├── DESIGN.md
+│   ├── README.md
+│   ├── harness.py
+│   ├── tasks/ hidden/ arms/ runs/
+│   └── report.md
 └── pyproject.toml
 ```
 
 ---
+
+## 评测（三臂实验）
+
+`bench/` 里是可复现的三臂实验：**无锚点 / 锚点 / 锚点+结构化编辑 × 从零写 / 结构重构**。
+
+```bash
+python bench/harness.py init
+# 用任意 agent runner 跑 bench/runs/<id>/prompt.md
+python bench/harness.py score
+python bench/harness.py report
+```
+
+- 设计、假设、样本量、效度威胁：[`bench/DESIGN.md`](bench/DESIGN.md)
+- 运行方式：[`bench/README.md`](bench/README.md)
+- pilot 原始数字：[`bench/report.md`](bench/report.md)
+- pilot 分析与结论：[`bench/PILOT.md`](bench/PILOT.md)
+
+Pilot 只有 1 run/cell，只用于验证流水线和检查天花板/地板效应，不做统计推断。
+本次 pilot（3 任务 × 3 臂 = 9 个 run）的结论是**天花板效应**：全部首轮通过，
+任务太简单，尚不能检验“锚点是否减少语义缩进错误”。成本上 **A < C < B**：
+A 最低；C（结构化编辑）比 B（手写锚点）更省，说明手写锚点的维护成本才是大头；
+但在当前难度下，两者相对 A 都是纯开销。下一步应先做难度校准，而不是扩大样本。
 
 ## 下一步
 
