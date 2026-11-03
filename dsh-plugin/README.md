@@ -42,6 +42,18 @@ The source bundle is linked into the current profile; keep the checkout in
 place for a linked install. The tools appear as `pyforai_check` and
 `pyforai_edit` in the next request.
 
+## Automatic use
+
+On activation the plugin registers a system-prompt section `tool:pyforai`.
+It tells the agent to:
+
+- call `pyforai_edit` with `fmt` on a new Python file, then `pyforai_check`;
+- use `pyforai_edit` for wrap / replace-body / move instead of hand-reindenting;
+- run `pyforai_check` after any Python write or edit.
+
+The section is always active while the plugin is enabled. In the controlled
+A/B/C bench, arm A and B carry an explicit override; arm C follows it.
+
 ## Reloading after a code change
 
 The Host imports `index.js` once. After editing it, toggle the bundle:

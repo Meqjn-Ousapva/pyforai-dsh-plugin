@@ -102,6 +102,10 @@ pyforai --version
 - `pyforai_check` — 校验锚点，只读；支持 `strict`、`minLines`、`minDepth`。
 - `pyforai_edit` — `fmt` / `wrap` / `replace_body` / `move`；自动缩进、原子写，支持 `dryRun`。
 
+插件还会注册 `tool:pyforai` 系统提示：生成或编辑 Python 时会自动调用
+`pyforai_edit`（新文件先 `fmt`）和 `pyforai_check`。控制实验的 A/B 臂有显式
+override，C 臂遵循该提示。
+
 安装到当前 profile（本机 `web`，位于 `~/.dsh/profiles/web`）：
 
 ```text

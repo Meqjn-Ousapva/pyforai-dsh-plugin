@@ -2,7 +2,7 @@ import { spawn, spawnSync } from 'node:child_process'
 import { chmodSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 
-export const inject = ['tools', 'workingDirectory']
+export const inject = ['tools', 'workingDirectory', 'systemPrompt']
 
 const DEFAULT_TIMEOUT_MS = 30_000
 const MAX_OUTPUT_BYTES = 4 * 1024 * 1024
@@ -19,6 +19,19 @@ export function apply(ctx, config = {}) {
 
   const binary = resolveBinary(settings.binaryPath)
   verifyBinary(binary)
+
+  ctx.systemPrompt.section({
+    name: 'tool:pyforai',
+    order: ctx.systemPrompt.getSectionOrder('TOOL_GOAL'),
+    text: `## Python: use pyforai
+
+When you create or edit Python code, use the pyforai tools:
+- For a new Python file, call pyforai_edit with command "fmt" to add anchors, then pyforai_check.
+- For structural changes (wrap, replace-body, move), call pyforai_edit; do not hand-reindent.
+- After any Python write or edit, call pyforai_check before finishing.
+- pyforai_edit writes unless dryRun is true; use dryRun to preview a risky edit.
+- If the tools are unavailable, fall back to direct editing and say so.`,
+  })
 
   ctx.effect(() => ctx.tools.register(checkTool(ctx, binary, settings)))
   ctx.effect(() => ctx.tools.register(editTool(ctx, binary, settings)))
@@ -169,8 +182,8 @@ function checkTool(ctx, binary, settings) {
   return {
     name: 'pyforai_check',
     description:
-      'Check Python files for `# end <kind>` anchor consistency. Read-only. ' +
-      'Returns diagnostics with line, column, code, and hint; use after structural edits and before tests.',
+      'Check Python files for `# end <kind>` anchor consistency. Read-only and fast. ' +
+      'Call this after writing or editing Python; returns diagnostics with line, column, code, and hint.',
     parameters: {
       type: 'object',
       properties: {
@@ -226,9 +239,10 @@ function editTool(ctx, binary, settings) {
   return {
     name: 'pyforai_edit',
     description:
-      'Structurally edit Python with pyforai: fmt inserts anchors, wrap adds try/if/with/for/while, ' +
+      'Use for Python code generation and structural edits: fmt inserts anchors, wrap adds try/if/with/for/while, ' +
       'replace_body replaces a block body, move relocates a block. Preserves indentation and anchors and ' +
-      'writes atomically. Set dryRun to preview. Prefer this over hand-reindenting.',
+      'writes atomically. Call fmt on a new Python file, then pyforai_check; set dryRun to preview. ' +
+      'Prefer this over hand-reindenting.',
     parameters: {
       type: 'object',
       properties: {
