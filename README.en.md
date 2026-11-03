@@ -42,6 +42,16 @@ Tool reference, config, reload, and sandbox notes: [`dsh-plugin/README.md`](dsh-
 
 ---
 
+## What this project set out to do
+
+pyforai did not start as a Python tool; it started as an exploration of a **language for AI programming**: if the primary reader is a model rather than a human, what should the syntax look like?
+
+Python was the starting point because of corpus richness — models have seen the most of it and write it best, and any new syntax would trade that prior away. The cost is that Python's indentation was designed for humans and is machine-hostile. The obvious move is a Python dialect, for example `{}` instead of indentation — but that immediately loses compatibility with existing Python: parsers, formatters, linters, tests, and all existing code would have to change.
+
+So the compromise is **comment anchors + tooling enforcement**: zero syntax change, no corpus lost; structural information lives in comments the parser already ignores, and `check` plus structural editing turn it into something checkable and addressable. This is an engineering compromise, not the optimal language design — and its ceiling comes from exactly this trade-off (see "What it solves, and what it doesn't" below).
+
+---
+
 ## Why comments, not braces or a new dialect
 
 Indentation has two real problems:
@@ -69,6 +79,19 @@ Three reasons for choosing Python all point at "don't touch the syntax":
 | Representation | Blocks get handles: wrap/replace/move, searchable, reviewable | Strong |
 
 One limitation must be stated clearly: **an anchor is a second sample of the same intent, not an independent checksum.** If the author's understanding of the structure and the indentation are wrong in the same place, the anchor is wrong in the same place too. It catches drift, not systematic misunderstanding. That is still valuable — drift dominates indentation incidents — but do not treat it as a formal proof.
+
+---
+
+## Advantages (data-backed)
+
+In one line: the reliable advantages are **validation** and **output economy on large re-indents** — not "making a strong model fix code more correctly or faster".
+
+- **Catches "syntactically valid but structurally wrong" drift**: E1 injects 592 syntactically valid drifts into 20 real files; `check` caught **476/476 (100%)**, `py_compile` missed all of them, and clean anchor files produced **0/165** false positives. `check --strict` separately caught 60/60 missing anchors (E010).
+- **Localized diagnostics**: diagnostics sit 0–1 lines from the drift, and E001–E008 all hit their expected codes.
+- **Large re-indents cut model output**: E2 wraps 20/80/200-statement `for` loops in `try/except`. At 200 statements the model-side payload drops from **15,940 B to 251 B (~63×)**; the three-size mean is 8,207 B → 296 B (~28×). What it saves is output tokens / context / cost — **wall-clock time does not improve**.
+- **Controlled results**: all six E2 runs solved, the target AST matched the expected one, and there were 0 collateral changes outside the target block.
+
+Conversely, the data does **not** support "helps a strong model fix code more correctly or faster" (E1 / E1.1 are at ceiling), and anchors are not a formal proof. The right positioning is a **CI / code-review structural-drift guard**, and **lower model output during large re-indents** — not "stronger automated repair". Full methodology, blind spots, and raw data: [`bench/SUMMARY.md`](bench/SUMMARY.md).
 
 ---
 
