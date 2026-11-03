@@ -1,0 +1,7 @@
+- insert:
+    - id: pyforai
+      name: '@local/pyforai'
+      config:
+        binaryPath: auto
+        pythonCheck: auto
+        timeoutMs: 30000

@@ -95,6 +95,34 @@ pyforai --version
 
 ---
 
+## DSH 集成（native plugin）
+
+`dsh-plugin/` 是一个 Host-only DSH bundle，把 `pyforai` 暴露成两个原生工具：
+
+- `pyforai_check` — 校验锚点，只读；支持 `strict`、`minLines`、`minDepth`。
+- `pyforai_edit` — `fmt` / `wrap` / `replace_body` / `move`；自动缩进、原子写，支持 `dryRun`。
+
+安装到当前 profile（本机 `web`，位于 `~/.dsh/profiles/web`）：
+
+```text
+plugin_manager action=install_bundle target=/absolute/path/to/python-for-AI/dsh-plugin
+```
+
+bundle 自带 Linux amd64/arm64 静态二进制；相对路径按调用 agent 的 session
+workspace 解析。row config：
+
+```yaml
+binaryPath: auto      # auto = bundle 内二进制；或绝对路径/命令
+pythonCheck: auto     # auto | on | off
+timeoutMs: 30000
+```
+
+源码是 link 安装：移动/删除 checkout 会让插件断链；修改 `index.js` 后需要
+toggle bundle 或重启 Harness 才会加载新的 Host 模块。工具说明、重载步骤和
+沙箱注意事项见 [`dsh-plugin/README.md`](dsh-plugin/README.md)。
+
+---
+
 ## 30 秒快速开始
 
 ```bash
@@ -331,6 +359,12 @@ python-for-AI/
 │   ├── edit.go        # L2 + 原子写 + diff + py_compile 校验
 │   ├── cli.go         # CLI / JSON
 │   ├── cmd/pyforai/
+│   └── README.md
+├── dsh-plugin/        # DSH Host-only bundle：pyforai_check / pyforai_edit
+│   ├── index.js       # 原生工具：spawn 二进制、workspace 解析、JSON 渲染
+│   ├── cordis.patch.yml
+│   ├── package.json
+│   ├── locale/ icon.svg bin/
 │   └── README.md
 ├── bin/               # make static 产物：pyforai-linux-amd64 / arm64
 ├── Makefile

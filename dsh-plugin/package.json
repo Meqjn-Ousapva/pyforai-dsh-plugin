@@ -1,0 +1,25 @@
+{
+  "name": "@local/pyforai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "pyforai tools for DSH: check and structurally edit Python anchors.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "bin/*",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
