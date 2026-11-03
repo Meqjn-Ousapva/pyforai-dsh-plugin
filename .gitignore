@@ -1,9 +1,11 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-bench/runs/
 go/.gocache/
 go/.gopath/
 .tmp-go/
 bin/
 dist/
+bench/e1/.deps/
+bench/e1/drift/results/cases/
+bench/e1/repair/runs/

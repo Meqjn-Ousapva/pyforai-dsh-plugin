@@ -1,0 +1,9 @@
+{
+  "slug": "E2_wrap_080",
+  "size": 80,
+  "required_reindent": 87,
+  "loop_line": 13,
+  "tests_sha256": "243b8ee03c659cbff4d217a2f56c4def0a5e4c27f61fa003aa2ec0e64142965a",
+  "start_sha256": "7ff6ae0e82fb704fe35e8864c846c31debd4d13cf30788b151b76c1073681eff",
+  "expected_sha256": "e47cbad5c5dba1370d1cc4fd984d5cd7cacb7b3b20c55065afa3b4be623ff9db"
+}
