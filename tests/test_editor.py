@@ -50,6 +50,39 @@ class FmtTests(EditorTestCase):
         )
         self.assert_parses(path)
 
+    def test_elif_does_not_duplicate_anchors(self) -> None:
+        path = self.write(
+            "def f(x):\n"
+            "    if x == 1:\n"
+            "        return 'a'\n"
+            "    elif x == 2:\n"
+            "        return 'b'\n"
+            "    return 'c'\n"
+        )
+        fmt(path, all_blocks=True)
+        text = path.read_text()
+        self.assertEqual(text.count("# end if"), 1)
+        self.assertEqual(text.count("# end def"), 1)
+        self.assert_parses(path)
+        strict = check_source(text, strict=True)
+        self.assertTrue(strict.ok, [d.message for d in strict.errors])
+
+    def test_strict_accepts_elif_chain(self) -> None:
+        path = self.write(
+            "def f(x):\n"
+            "    if x == 1:\n"
+            "        return 'a'\n"
+            "    elif x == 2:\n"
+            "        return 'b'\n"
+            "    else:\n"
+            "        return 'c'\n"
+        )
+        fmt(path, all_blocks=True)
+        text = path.read_text()
+        self.assertEqual(text.count("# end if"), 1)
+        strict = check_source(text, strict=True)
+        self.assertTrue(strict.ok, [d.message for d in strict.errors])
+
     def test_idempotent(self) -> None:
         path = self.write("def f():\n    if a:\n        pass\n")
         fmt(path, all_blocks=True)

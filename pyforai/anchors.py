@@ -139,12 +139,26 @@ def build_model(src: str, filename: str = "<string>") -> SourceModel:
     if src.startswith("\ufeff"):
         src = src[1:]
     tree = ast.parse(src, filename)
+    lines = src.splitlines(keepends=True)
+    blocks = collect_blocks(tree)
+    # ``elif`` is an ``If`` node nested in ``orelse``; the enclosing ``if``
+    # already covers the whole statement.  Keeping both would let an anchor
+    # bind to the ``elif`` instead of the outer block, so drop the nested one.
+    blocks = [
+        block
+        for block in blocks
+        if not (
+            isinstance(block.node, ast.If)
+            and 0 < block.lineno <= len(lines)
+            and lines[block.lineno - 1].lstrip(" \t").startswith("elif ")
+        )
+    ]
     return SourceModel(
         src=src,
         filename=filename,
         tree=tree,
-        lines=src.splitlines(keepends=True),
-        blocks=collect_blocks(tree),
+        lines=lines,
+        blocks=blocks,
         anchors=find_anchors(src),
         starts=logical_starts(src),
         newline=detect_newline(src),

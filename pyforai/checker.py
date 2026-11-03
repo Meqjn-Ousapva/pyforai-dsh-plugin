@@ -283,14 +283,28 @@ def _match(model: SourceModel) -> tuple[list[Diagnostic], list[Match]]:
     return diagnostics, matches
 
 
-def _block_depths(tree: ast.AST) -> dict[tuple[int, int], int]:
-    """Map ``(lineno, col)`` of each compound header to its nesting depth."""
+def _block_depths(tree: ast.AST, lines: list[str]) -> dict[tuple[int, int], int]:
+    """Map ``(lineno, col)`` of each compound header to its nesting depth.
+
+    ``elif`` nodes are part of the enclosing ``if`` statement, not a new
+    nesting level; counting them would make strict mode demand an extra anchor
+    for a block that already has one.
+    """
     depths: dict[tuple[int, int], int] = {}
+
+    def is_elif(node: ast.AST) -> bool:
+        if not isinstance(node, ast.If):
+            return False
+        return (
+            0 < node.lineno <= len(lines)
+            and lines[node.lineno - 1].lstrip(" \t").startswith("elif ")
+        )
 
     def visit(node: ast.AST, depth: int) -> None:
         if kind_of(node) is not None:
-            depths[(node.lineno, node.col_offset)] = depth
-            depth += 1
+            if not is_elif(node):
+                depths[(node.lineno, node.col_offset)] = depth
+                depth += 1
         for child in ast.iter_child_nodes(node):
             visit(child, depth)
 
@@ -305,10 +319,16 @@ def _missing_anchors(
     min_depth: int,
 ) -> list[Diagnostic]:
     matched = {m.block.key for m in matches}
-    depths = _block_depths(model.tree)
+    depths = _block_depths(model.tree, model.lines)
     diagnostics: list[Diagnostic] = []
     for block in model.blocks:
         if block.is_one_line or block.key in matched:
+            continue
+        # ``elif`` is an ``If`` nested in ``orelse``; the outer ``if`` anchor
+        # already closes it.  Counting it here would make ``check --strict``
+        # demand a second anchor that ``fmt`` correctly refuses to insert.
+        header = model.lines[block.lineno - 1].lstrip(" \t")
+        if header.startswith("elif "):
             continue
         depth = depths.get((block.lineno, block.col), 0)
         span = block.end_lineno - block.lineno + 1
@@ -342,18 +362,31 @@ def plan_fmt(
     Real validation comes from anchors written before the code is trusted.
     """
     matched = {m.block.key for m in matches}
-    depths = _block_depths(model.tree)
+    depths = _block_depths(model.tree, model.lines)
     plan: list[Insertion] = []
+    seen: set[tuple[int, int]] = set()
     for block in model.blocks:
         if block.is_one_line or block.key in matched:
+            continue
+        # An ``elif`` is an ``If`` node nested in ``orelse``; its end line and
+        # column are the same as the outer ``if``.  Anchoring both would emit
+        # two ``# end if`` lines at the same place (E005).  The outer anchor
+        # already closes the whole statement, so skip the nested ``elif``.
+        header = model.lines[block.lineno - 1].lstrip(" \t")
+        if header.startswith("elif "):
             continue
         depth = depths.get((block.lineno, block.col), 0)
         span = block.end_lineno - block.lineno + 1
         if not all_blocks and span < min_lines and depth < min_depth:
             continue
+        after_line = _anchor_insertion_line(model, block)
+        key = (after_line, block.col)
+        if key in seen:
+            continue
+        seen.add(key)
         plan.append(
             Insertion(
-                after_line=_anchor_insertion_line(model, block),
+                after_line=after_line,
                 col=block.col,
                 kind=block.kind,
                 prefix=leading_ws(model.lines[block.lineno - 1]),
