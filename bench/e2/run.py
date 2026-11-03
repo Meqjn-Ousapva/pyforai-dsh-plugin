@@ -316,8 +316,8 @@ def arm_text(arm: str, run_rel: str, loop_line: int) -> str:
 - Edit `{run_rel}/solution.py` directly.
 - Do **not** run `pyforai` or any structural editor.
 - Do **not** write a script whose purpose is to re-indent or transform the file.
-- After editing, you may run `bench/e2/bin/black {run_rel}/solution.py`
-  (a local wrapper for the formatter).
+- After editing, you may run `black {run_rel}/solution.py` if a formatter is
+  installed.  The formatter arm is optional and was not part of the pilot.
 - You may run the public tests.
 """
     if arm == "plugin":
