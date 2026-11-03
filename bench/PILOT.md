@@ -19,25 +19,25 @@ The cost result is more interesting than the correctness result:
 
 ## Measurements
 
-| task | arm | public | hidden | anchor err | anchors | LOC | diff +/- | test runs | repairs | wall s | pyforai calls |
+| task | arm | public | hidden | anchor err | anchors | LOC | diff +/- | test runs | repairs | wall s | pyforai ops+help |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| R1_retry_loop | A | yes | yes | 0 | 0 | 21 | 9/4 | 1 | 0 | 10 | 0 |
-| R1_retry_loop | B | yes | yes | 0 | 4 | 24 | 11/4 | 1 | 0 | 60 | 1 |
-| R1_retry_loop | C | yes | yes | 0 | 8 | 28 | 15/4 | 1 | 0 | 58 | 12 |
-| R2_reconcile | A | yes | yes | 0 | 0 | 37 | 10/7 | 1 | 0 | 6 | — |
-| R2_reconcile | B | yes | yes | 0 | 6 | 43 | 16/7 | 1 | 0 | 81 | 6 |
-| R2_reconcile | C | yes | yes | 0 | 1 | 38 | 11/7 | 1 | 0 | 16 | 2 |
-| W1_retry | A | yes | yes | 0 | 0 | 31 | 39/0 | 2 | 0 | 16 | 0 |
-| W1_retry | B | yes | yes | 0 | 6 | 62 | 70/0 | 1 | 0 | 74 | 2 |
-| W1_retry | C | yes | yes | 0 | 8 | 45 | 55/0 | 2 | 0 | 57 | 4 |
+| R1_retry_loop | A | yes | yes | 0 | 0 | 21 | 9/4 | 1 | 0 | 10 | 0+0 |
+| R1_retry_loop | B | yes | yes | 0 | 4 | 24 | 11/4 | 1 | 0 | 60 | 1+0 |
+| R1_retry_loop | C | yes | yes | 0 | 8 | 28 | 15/4 | 1 | 0 | 58 | 6+6 |
+| R2_reconcile | A | yes | yes | 0 | 0 | 37 | 10/7 | 1 | 0 | 6 | —+— |
+| R2_reconcile | B | yes | yes | 0 | 6 | 43 | 16/7 | 1 | 0 | 81 | 3+3 |
+| R2_reconcile | C | yes | yes | 0 | 1 | 38 | 11/7 | 1 | 0 | 16 | 2+0 |
+| W1_retry | A | yes | yes | 0 | 0 | 31 | 39/0 | 2 | 0 | 16 | 0+0 |
+| W1_retry | B | yes | yes | 0 | 6 | 62 | 70/0 | 1 | 0 | 74 | 2+0 |
+| W1_retry | C | yes | yes | 0 | 8 | 45 | 55/0 | 2 | 0 | 57 | 4+0 |
 
 Aggregate:
 
-| arm | condition | n | public | hidden | anchor err | anchors | LOC | diff | repairs | wall s | success/min | pyforai |
+| arm | condition | n | public | hidden | anchor err | anchors | LOC | diff | repairs | wall s | success/min | pyforai ops+help |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| A | no anchors | 3 | 3/3 | 3/3 | 0.0 | 0.0 | 29.7 | 23.0 | 0.0 | 10.7 | 5.62 | 0.0 |
-| B | anchors | 3 | 3/3 | 3/3 | 0.0 | 5.3 | 43.0 | 36.0 | 0.0 | 71.7 | 0.84 | 3.0 |
-| C | anchors + structural editing | 3 | 3/3 | 3/3 | 0.0 | 5.7 | 37.0 | 30.7 | 0.0 | 43.7 | 1.37 | 6.0 |
+| A | no anchors | 3 | 3/3 | 3/3 | 0.0 | 0.0 | 29.7 | 23.0 | 0.0 | 10.7 | 5.62 | 0.0+0.0 |
+| B | anchors | 3 | 3/3 | 3/3 | 0.0 | 5.3 | 43.0 | 36.0 | 0.0 | 71.7 | 0.84 | 2.0+1.0 |
+| C | anchors + structural editing | 3 | 3/3 | 3/3 | 0.0 | 5.7 | 37.0 | 30.7 | 0.0 | 43.7 | 1.37 | 4.0+2.0 |
 
 `success/min` = hidden passes / total wall-clock minutes. `diff` = added +
 removed lines against `start.py` (write tasks: against an empty file).
@@ -80,7 +80,7 @@ enough reindent, when the alternative is hand-maintaining anchors.
 
 R1 and W1 are noisier:
 
-- R1: C 58 s vs B 60 s; C's 12 pyforai calls include six `--help` calls, and
+- R1: C 58 s vs B 60 s. C's 12 calls are **6 actual operations + 6 `--help`**;
   `fmt --all` over-anchored the file (8 anchors). The over-anchoring inflated
   C's LOC/diff.
 - W1: B 74 s / 62 LOC is an outlier driven by docstrings/prose, not anchors;
@@ -88,6 +88,22 @@ R1 and W1 are noisier:
 
 The aggregate still favors C over B, but N=1 per cell means this is a hypothesis,
 not a result.
+
+### `--help` is a CLI integration artifact
+
+`pyforai` is invoked through bash, so its flags are not in the agent's native
+tool schema. R1 C ran the top-level help plus each subcommand's help (6 calls)
+before doing 6 real operations. This is not specific to C: R2 B ran 3 help calls
+when it went looking for `fmt`/strict options, and R2 C needed none because the
+`wrap` example in the arm prompt was enough. The variance is discovery, not
+workflow. A DSH tool with a JSON schema (or a skill with a command card) would
+remove most of it.
+
+The help calls are cheap in wall time (CLI startup is milliseconds), but they
+inflate a naive call count. The `ops+help` split keeps the tool-cost comparison
+honest: C averages 4.0 ops + 2.0 help, B averages 2.0 ops + 1.0 help. C still
+does more real operations because it runs `check` after each structural edit;
+that is the intended workflow, not overhead.
 
 ### Artifact size
 

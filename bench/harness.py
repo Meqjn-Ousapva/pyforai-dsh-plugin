@@ -82,17 +82,25 @@ def _attempt_stats(path: Path) -> tuple[Optional[int], Optional[int]]:
     return len(lines), failures
 
 
-def _count_pyforai(path: Path) -> Optional[int]:
+def _pyforai_stats(path: Path) -> tuple[Optional[int], Optional[int]]:
+    """Return (help calls, actual operations) from ``commands.log``.
+
+    ``--help`` is discovery overhead: the CLI is invoked through bash, so its
+    flags are not in the agent's tool schema.  Separating help from real
+    operations keeps the tool-cost comparison honest.
+    """
     if not path.exists():
-        return None
+        return None, None
     try:
-        return sum(
-            1
+        lines = [
+            line
             for line in path.read_text(encoding="utf-8", errors="replace").splitlines()
             if "pyforai" in line
-        )
+        ]
     except OSError:
-        return None
+        return None, None
+    help_calls = sum(1 for line in lines if "--help" in line)
+    return help_calls, len(lines) - help_calls
 
 
 def build_prompt(task: str, arm: str, run_name: str, arm_rules: str) -> str:
@@ -230,6 +238,8 @@ def score_run(run_dir: Path) -> dict:
         "test_runs": None,
         "wall_time_s": None,
         "pyforai_calls": None,
+        "pyforai_help_calls": None,
+        "pyforai_ops": None,
         "summary": "",
         "check_output": "",
         "public_output": "",
@@ -286,7 +296,9 @@ def score_run(run_dir: Path) -> dict:
         current_tests.exists() and _sha256(current_tests) == meta.get("tests_sha256")
     )
     metrics["test_runs"], metrics["repair_attempts"] = _attempt_stats(run_dir / "attempts.log")
-    metrics["pyforai_calls"] = _count_pyforai(run_dir / "commands.log")
+    metrics["pyforai_help_calls"], metrics["pyforai_ops"] = _pyforai_stats(run_dir / "commands.log")
+    if metrics["pyforai_help_calls"] is not None and metrics["pyforai_ops"] is not None:
+        metrics["pyforai_calls"] = metrics["pyforai_help_calls"] + metrics["pyforai_ops"]
     started = _read_int(run_dir / "started_at.txt")
     finished = _read_int(run_dir / "finished_at.txt")
     if started is not None and finished is not None and finished >= started:
@@ -366,6 +378,8 @@ def _aggregate(metrics: list[dict]) -> list[dict]:
                 "wall_total": wall_total if wall_values else None,
                 "success_per_min": (hidden / wall_total * 60) if wall_total else None,
                 "pyforai_calls": _mean([m["pyforai_calls"] for m in group]),
+                "pyforai_ops": _mean([m["pyforai_ops"] for m in group]),
+                "pyforai_help": _mean([m["pyforai_help_calls"] for m in group]),
                 "tampered": sum(1 for m in group if m["tampered_tests"]),
             }
         )
@@ -400,7 +414,7 @@ def cmd_report(args: argparse.Namespace) -> int:
                 f'{m["diff_added"]}/{m["diff_removed"]}',
                 _fmt(m["repair_attempts"]),
                 _fmt(m["wall_time_s"]),
-                _fmt(m["pyforai_calls"]),
+                f"{_fmt(m['pyforai_ops'])}+{_fmt(m['pyforai_help_calls'])}",
                 "TAMPERED" if m["tampered_tests"] else "",
             ]
         )
@@ -421,7 +435,7 @@ def cmd_report(args: argparse.Namespace) -> int:
                 _fmt(row["repair"]),
                 _fmt(row["wall"]),
                 _fmt(row["success_per_min"], 2),
-                _fmt(row["pyforai_calls"]),
+                f"{_fmt(row['pyforai_ops'])}+{_fmt(row['pyforai_help'])}",
                 str(row["tampered"]),
             ]
         )
@@ -438,7 +452,7 @@ def cmd_report(args: argparse.Namespace) -> int:
             "diff +/-",
             "repair",
             "wall s",
-            "pyforai",
+            "pyforai ops+help",
             "flags",
         ],
         per_run_rows,
@@ -457,7 +471,7 @@ def cmd_report(args: argparse.Namespace) -> int:
             "repair",
             "wall s",
             "success/min",
-            "pyforai",
+            "pyforai ops+help",
             "tampered",
         ],
         aggregate_rows,
@@ -483,6 +497,9 @@ Generated: {time.strftime("%Y-%m-%d %H:%M:%S")}
 reported `started_at.txt` and `finished_at.txt`. `diff +/-` is added/removed
 lines against `start.py` (for write tasks, against an empty file).
 `anchor err` is the number of `pyforai check` errors in the final artifact.
+`pyforai ops+help` separates actual CLI operations from `--help` discovery
+calls. The latter are an onboarding cost of using a CLI without a native tool
+schema; they are cheap in wall time but inflate the call count.
 
 ## Caveats
 

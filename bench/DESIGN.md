@@ -75,7 +75,9 @@ ledger entries。要求把 `if account.active:` 的整个 body 包进
 - **diff_added / diff_removed**：相对 `start.py` 的变更行数；从零写任务相对空文件。
 - **loc**：最终 `solution.py` 的非空行数。
 - **anchor_count / anchor_errors**：最终锚点数量和 `check` 错误数（合规性/质量）。
-- **pyforai_calls**：`commands.log` 中 `pyforai` 命令数（工具成本）。
+- **pyforai_ops / pyforai_help_calls**：`commands.log` 中实际 CLI 操作数与
+  `--help` 发现次数。后者是 CLI 没有原生 tool schema 时的 onboarding 成本，
+  应单独看；把 help 混进工具调用数会高估 C 的工具开销。
 - **tampered_tests**：`tests_public.py` 是否被修改（完整性检查）。
 
 ### 效率口径

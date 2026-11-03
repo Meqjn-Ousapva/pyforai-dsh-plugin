@@ -66,6 +66,35 @@ python -m pyforai --help
 
 ---
 
+## Go 编译版（推荐用于高频调用）
+
+`go/` 下是同一 CLI 的 Go 实现：**单个静态二进制**，不依赖 Python/glibc，启动约 1 ms。
+
+```bash
+make build          # bin/pyforai（本机）
+make static         # bin/pyforai-linux-amd64 + arm64（静态）
+make test           # Go 单测
+sudo ./install.sh   # 安装到 /usr/local/bin/pyforai
+pyforai --version
+```
+
+性能（本机 100 次，含进程启动）：
+
+| 命令 | Python 版 | Go 版 | 加速 |
+|---|---|---|---|
+| `check examples/demo_good.py` | 50.3 ms | 1.36 ms | ~37× |
+| `fmt --all --dry-run examples/demo_before.py` | 50.3 ms | 1.31 ms | ~38× |
+
+`wrap` / `replace-body` 默认 `--python-check=auto`（有 Python 时用 `py_compile`
+做完整语法校验，约 31 ms/次）；`fmt` / `move` 默认 `off`（纯结构变换，约 1.3 ms）。
+需要绝对安全用 `--python-check=on`，需要极致速度用 `off`。
+
+一致性：`go/oracle_check.py` 在 62 个项目内文件上对照 Python 版 `check`，当前
+**0 差异**；`examples/demo_*` 上的编辑输出与 Python 版逐字节一致。完整说明见
+[`go/README.md`](go/README.md)。
+
+---
+
 ## 30 秒快速开始
 
 ```bash
@@ -291,17 +320,28 @@ python -m unittest discover -s tests -v
 
 ```
 python-for-AI/
-├── pyforai/
+├── pyforai/           # Python 参考实现（规范/测试 oracle）
 │   ├── anchors.py     # 块模型、锚点词法、逻辑行起点
 │   ├── checker.py     # L1：校验、诊断、strict、fmt 计划
 │   ├── editor.py      # L2：wrap / replace-body / move / fmt，原子写
 │   └── cli.py         # 命令行与 JSON
+├── go/                # Go 编译版（推荐高频调用）
+│   ├── scan.go        # lexer + 块解析器
+│   ├── check.go       # L1
+│   ├── edit.go        # L2 + 原子写 + diff + py_compile 校验
+│   ├── cli.go         # CLI / JSON
+│   ├── cmd/pyforai/
+│   └── README.md
+├── bin/               # make static 产物：pyforai-linux-amd64 / arm64
+├── Makefile
+├── install.sh
 ├── tests/             # unittest，无第三方依赖
 ├── examples/
 │   ├── demo_good.py   # 默认 check 通过
 │   ├── demo_bad.py    # 四类错误
 │   ├── demo_before.py # 无锚点，用于 fmt/wrap 演示
-│   └── demo_move.py   # 用于 move 演示
+│   ├── demo_move.py   # 用于 move 演示
+│   └── edge.py        # decorators/async/match/try-finally/for-else
 ├── docs/SPEC.md       # 规范：词法、位置、不变式、错误码、编辑语义
 ├── bench/             # 三臂实验：任务、arms、harness、pilot 报告
 │   ├── DESIGN.md
