@@ -12,6 +12,9 @@ All three share the same shape: the harness prepares run directories and
 scores artifacts; an external agent produces the artifact.  The harness never
 calls an LLM.
 
+**Data-backed summary of what the plugin is and is not good at:
+[`SUMMARY.md`](SUMMARY.md).**
+
 ## Quick start
 
 ```bash
@@ -71,6 +74,7 @@ runs), because the file diff is not the model's output.
 
 ## Results
 
+- [`SUMMARY.md`](SUMMARY.md) — consolidated plugin advantages/limits with data.
 - [`e1/FINDINGS.md`](e1/FINDINGS.md) — E1 summary and decision implications.
 - [`e1/drift/results/report.md`](e1/drift/results/report.md) — detection,
   formatter, black.
