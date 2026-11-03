@@ -45,7 +45,7 @@ plugin_manager action=install_bundle target=/absolute/path/to/<repo>/dsh-plugin
 1. **块结构不可寻址**——token 流里没有块边界，块没有名字，只能按行号或文本片段指代。
 2. **结构变换不局部**——包一层 `try` / `if` 要重排整段，diff 放大、缩进漂移。
 
-大括号能同时治两半，但代价是丢语料、破工具链。注释锚点只能治第一半；第二半靠 L2 的结构化编辑。这是它便宜的原因，也是它天花板有限的原因。
+大括号能同时治两半，但代价是丢语料、破工具链。注释锚点只能治第一半；第二半靠结构化编辑（`wrap` / `replace-body` / `move`）。这是它便宜的原因，也是它天花板有限的原因。
 
 三条选 Python 的理由，恰好都指向“别动语法”：
 
@@ -60,7 +60,7 @@ plugin_manager action=install_bundle target=/absolute/path/to/<repo>/dsh-plugin
 | | 锚点的作用 | 强度 |
 |---|---|---|
 | 生成期 | 关闭块时显式承诺一次，减少“丢栈” | 弱正向 |
-| 编辑期 | 本身不解决 reindent，必须配 L2 | 无 |
+| 编辑期 | 锚点本身不解决缩进重排；要配合 `wrap` / `replace-body` / `move` 这类结构化编辑 | 无 |
 | 校验期 | 把“意图 vs 词法”的分歧变成可检测错误 | 中等 |
 | 表示期 | 块有 handle，可 wrap/replace/move、可检索、可审阅 | 强 |
 
@@ -339,7 +339,7 @@ python -m pyforai check --strict src/
 
 1. **权威在工具链，不在语法。** Python 忽略锚点；`pyforai` 把不一致当硬错误。这样既拿到校验，又不分叉语言。
 2. **锚点可选、稀疏。** 双表示对短块是净负担；只在值得的地方写。
-3. **不做空白手术。** L2 负责 reindent；模型只表达“把哪个块包进什么”。
+3. **不做空白手术。** 结构化编辑（`wrap` / `replace-body` / `move`）负责重排缩进；模型只表达“把哪个块包进什么”。
 4. **先校验再写。** 结果必须能 parse 且通过 anchor check；否则原文件不动。
 5. **不碰多行字符串内部。** 宁可视觉不齐，也不改字符串值。
 6. **保持编码和换行。** PEP 263 / BOM / CRLF / 末尾换行都尽量原样保留。
