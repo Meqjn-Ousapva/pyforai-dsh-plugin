@@ -79,6 +79,10 @@ It tells the agent to:
 - use `pyforai_edit` for wrap / replace-body / move instead of hand-reindenting;
 - run `pyforai_check` after any Python write or edit.
 
+Through the plugin, `fmt` anchors every multi-line block by default; pass
+`all: false` for the CLI's size/depth-threshold selection (blocks spanning fewer
+than 5 lines and nested shallower than depth 3 stay unanchored).
+
 The section is always active while the plugin is enabled.  Evaluation arms can
 carry an explicit override; the default is to follow it.
 

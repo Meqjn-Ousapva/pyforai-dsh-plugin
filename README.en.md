@@ -144,7 +144,7 @@ Consistency: `go/oracle_check.py` compares the Go `check` against the Python ver
 - `pyforai_check` — validate anchors, read-only; supports `strict`, `minLines`, `minDepth`.
 - `pyforai_edit` — `fmt` / `wrap` / `replace_body` / `move`; automatic indentation and atomic writes, with `dryRun` support.
 
-The plugin also registers a `tool:pyforai` system prompt: when generating or editing Python it calls `pyforai_edit` (starting new files with `fmt`) and `pyforai_check`. Evaluation arms such as `no_check` can explicitly disable the prompt; the default is to follow it.
+The plugin also registers a `tool:pyforai` system prompt: when generating or editing Python it calls `pyforai_edit` (starting new files with `fmt`, which anchors every multi-line block by default) and `pyforai_check`. Evaluation arms such as `no_check` can explicitly disable the prompt; the default is to follow it.
 
 Install into the current profile (on this machine `web`, at `~/.dsh/profiles/web`):
 

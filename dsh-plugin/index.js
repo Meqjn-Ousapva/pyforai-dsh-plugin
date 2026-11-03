@@ -283,10 +283,11 @@ function editTool(ctx, binary, settings) {
         },
         all: {
           type: 'boolean',
-          description: 'fmt: insert anchors for every multi-line block.',
+          description:
+            'fmt: anchor every multi-line block. Default true; set false to anchor only blocks spanning >=5 lines or nested >=3 deep.',
         },
-        minLines: { type: 'number', description: 'fmt: minimum block span (default 5).' },
-        minDepth: { type: 'number', description: 'fmt: minimum nesting depth (default 3).' },
+        minLines: { type: 'number', description: 'fmt (all: false): minimum block span (default 5).' },
+        minDepth: { type: 'number', description: 'fmt (all: false): minimum nesting depth (default 3).' },
         beforeLine: { type: 'number', description: 'move: insert before this line.' },
         afterLine: { type: 'number', description: 'move: insert after this line.' },
         intoLine: {
@@ -358,7 +359,7 @@ function buildEditArgs(args, settings) {
   const argv = [command === 'replace_body' ? 'replace-body' : command]
   if (command === 'fmt') {
     argv.push('--json', file)
-    if (args.all === true) argv.push('--all')
+    if (args.all !== false) argv.push('--all')
     if (Number.isFinite(args.minLines)) argv.push('--min-lines', String(args.minLines))
     if (Number.isFinite(args.minDepth)) argv.push('--min-depth', String(args.minDepth))
   } else {

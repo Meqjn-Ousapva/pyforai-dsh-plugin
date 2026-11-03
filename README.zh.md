@@ -150,7 +150,7 @@ pyforai --version
 - `pyforai_edit` — `fmt` / `wrap` / `replace_body` / `move`；自动缩进、原子写，支持 `dryRun`。
 
 插件还会注册 `tool:pyforai` 系统提示：生成或编辑 Python 时会自动调用
-`pyforai_edit`（新文件先 `fmt`）和 `pyforai_check`。评测中的 `no_check` 等臂
+`pyforai_edit`（新文件先 `fmt`，默认给所有多行块加锚点）和 `pyforai_check`。评测中的 `no_check` 等臂
 可以显式关闭该提示；默认行为是自动使用。
 
 安装到当前 profile（本机 `web`，位于 `~/.dsh/profiles/web`）：
