@@ -3,7 +3,16 @@
 > **DSH插件 / DSH plugin for Python:** expose pyforai's Python structural
 > validation and structural editing as two native DSH tools.
 
-A Host-only DSH bundle that exposes the `pyforai` binary as two native tools:
+pyforai is a structural editing and validation tool for Python AI coding. It
+uses comment anchors (`# end if`, `# end for`, …) to give Python code a
+checkable structural representation, so block boundaries are explicit and
+addressable instead of implicit in whitespace. That is what solves the
+indentation drift and structural-transformation problems AI coding agents run
+into: the plugin exposes `pyforai_check` and `pyforai_edit` as two native DSH
+tools with `wrap`, `replace-body`, and `move` operations, so an agent no longer
+has to hand-edit whitespace.
+
+The bundle is Host-only:
 
 - `pyforai_check` — validate `# end <kind>` anchors in Python files.
 - `pyforai_edit` — `fmt`, `wrap`, `replace_body`, and `move`, with automatic
@@ -40,6 +49,22 @@ Then install the bundle through DSH's plugin manager:
 ```text
 plugin_manager action=install_bundle target=/absolute/path/to/<repo>/dsh-plugin
 ```
+
+Or from a shell — same pnpm install, same profile manifest, same `link:`
+dependency and bundle selection:
+
+```bash
+dsh plugin --profile web add /absolute/path/to/<repo>/dsh-plugin
+```
+
+The difference is activation: `install_bundle` applies the bundle in the running
+Host and reports `applied` / `restart-required`, while the CLI only writes the
+profile. A new bundle changes `dsh.profile.bundles`, so a running HMR usually
+recomposes on its own; a repeated link of the same directory, or an edited
+`index.js`, changes no list and needs a restart or a bundle toggle. The CLI also
+accepts a relative path (resolved from the current directory), but it does not
+refuse non-bundle packages and does not roll back the manifest and lockfile when
+pnpm itself fails.
 
 The source bundle is linked into the current profile; keep the checkout in
 place for a linked install. The tools appear as `pyforai_check` and
