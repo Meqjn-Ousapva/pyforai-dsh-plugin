@@ -1,0 +1,186 @@
+{
+  "created": "2026-11-03T15:08:02+0800",
+  "python": "3.12.3",
+  "files": [
+    {
+      "id": "repo_bench_calibrate_generate_py",
+      "path": "corpus/files/repo_bench_calibrate_generate_py.py",
+      "origin": "former bench/calibrate/generate.py (removed in E1 cleanup)",
+      "license": "MIT",
+      "sha256": "a4be7d301edb8971e692d0b6fa3f2f773ac37d4ff23a9b33b1a07ab5b3b01ee2",
+      "lines": 533,
+      "blocks": 22
+    },
+    {
+      "id": "repo_bench_calibrate_generate_t_py",
+      "path": "corpus/files/repo_bench_calibrate_generate_t_py.py",
+      "origin": "former bench/calibrate/generate_t.py (removed in E1 cleanup)",
+      "license": "MIT",
+      "sha256": "3df5043e1d4f1c733e7dd2b54341616d943fa383b649e1d9fa543277ffc5e953",
+      "lines": 397,
+      "blocks": 19
+    },
+    {
+      "id": "repo_bench_harness_py",
+      "path": "corpus/files/repo_bench_harness_py.py",
+      "origin": "former bench/harness.py (removed in E1 cleanup)",
+      "license": "MIT",
+      "sha256": "69cf6d11bf36bb29532889f0960079da68de68542cf6c5192fb283b2ca2de624",
+      "lines": 576,
+      "blocks": 60
+    },
+    {
+      "id": "repo_pyforai_anchors_py",
+      "path": "corpus/files/repo_pyforai_anchors_py.py",
+      "origin": "pyforai/anchors.py",
+      "license": "MIT",
+      "sha256": "f038de7d1c9a5eed591196a187e708fc8dbfb5ebea4bf9ee13e41d8c4be5aca5",
+      "lines": 273,
+      "blocks": 50
+    },
+    {
+      "id": "repo_pyforai_checker_py",
+      "path": "corpus/files/repo_pyforai_checker_py.py",
+      "origin": "pyforai/checker.py",
+      "license": "MIT",
+      "sha256": "f4aeb94b818062fef36b78f84dc65c8cd9d353103ed50d9139c85b03d88df4b4",
+      "lines": 382,
+      "blocks": 42
+    },
+    {
+      "id": "repo_pyforai_cli_py",
+      "path": "corpus/files/repo_pyforai_cli_py.py",
+      "origin": "pyforai/cli.py",
+      "license": "MIT",
+      "sha256": "09a35be0ac72a2226baac7c13851d9c912129bbf844a306d689795a8428672c3",
+      "lines": 425,
+      "blocks": 55
+    },
+    {
+      "id": "repo_pyforai_editor_py",
+      "path": "corpus/files/repo_pyforai_editor_py.py",
+      "origin": "pyforai/editor.py",
+      "license": "MIT",
+      "sha256": "e68182a8e933c0d40967e6d72f504c855cbc4e409c98cc63ab1f92fdc4ae81cc",
+      "lines": 537,
+      "blocks": 98
+    },
+    {
+      "id": "repo_tests_test_checker_py",
+      "path": "corpus/files/repo_tests_test_checker_py.py",
+      "origin": "tests/test_checker.py",
+      "license": "MIT",
+      "sha256": "3996f4c2041ba878c02a81c09df38a8efbf86cfc7914fb0749637f0e1c9f5d64",
+      "lines": 190,
+      "blocks": 28
+    },
+    {
+      "id": "stdlib_argparse_py",
+      "path": "corpus/files/stdlib_argparse_py.py",
+      "origin": "CPython 3.12 Lib/argparse.py",
+      "license": "PSF-2.0",
+      "sha256": "29395feb61bc376ca4ff9d44069af8d914ec2a1f25a4bd7978f6e2afef5bc07f",
+      "lines": 2677,
+      "blocks": 432
+    },
+    {
+      "id": "stdlib_configparser_py",
+      "path": "corpus/files/stdlib_configparser_py.py",
+      "origin": "CPython 3.12 Lib/configparser.py",
+      "license": "PSF-2.0",
+      "sha256": "8d822edd41d1085e0c697f1926f3f98e5c7889b4072361ae88726464b37f6460",
+      "lines": 1333,
+      "blocks": 238
+    },
+    {
+      "id": "stdlib_contextlib_py",
+      "path": "corpus/files/stdlib_contextlib_py.py",
+      "origin": "CPython 3.12 Lib/contextlib.py",
+      "license": "PSF-2.0",
+      "sha256": "8b7a477f978a8532852fd81e241c78182516bc4975d672d580a5848a76e11eb6",
+      "lines": 800,
+      "blocks": 135
+    },
+    {
+      "id": "stdlib_csv_py",
+      "path": "corpus/files/stdlib_csv_py.py",
+      "origin": "CPython 3.12 Lib/csv.py",
+      "license": "PSF-2.0",
+      "sha256": "46004923196e98a67f87d30da64d070027c81f144f5ac91242fbfae33507dda8",
+      "lines": 451,
+      "blocks": 79
+    },
+    {
+      "id": "stdlib_dataclasses_py",
+      "path": "corpus/files/stdlib_dataclasses_py.py",
+      "origin": "CPython 3.12 Lib/dataclasses.py",
+      "license": "PSF-2.0",
+      "sha256": "0e449d55d6206b0022f541ba32be88fafc934ff71d9aa65f31f101ca6147f2ae",
+      "lines": 1581,
+      "blocks": 173
+    },
+    {
+      "id": "stdlib_functools_py",
+      "path": "corpus/files/stdlib_functools_py.py",
+      "origin": "CPython 3.12 Lib/functools.py",
+      "license": "PSF-2.0",
+      "sha256": "cca971c456e1bec8b751aecdf41466f34dbf72321ee0840627280ba2ccf9d033",
+      "lines": 1006,
+      "blocks": 175
+    },
+    {
+      "id": "stdlib_json_encoder_py",
+      "path": "corpus/files/stdlib_json_encoder_py.py",
+      "origin": "CPython 3.12 Lib/json/encoder.py",
+      "license": "PSF-2.0",
+      "sha256": "af7bd40a0d0d0a3e726a9b4b3a2a543019f6ab97a340d0162a9c29ca9da97869",
+      "lines": 443,
+      "blocks": 57
+    },
+    {
+      "id": "stdlib_pathlib_py",
+      "path": "corpus/files/stdlib_pathlib_py.py",
+      "origin": "CPython 3.12 Lib/pathlib.py",
+      "license": "PSF-2.0",
+      "sha256": "b43e134bf7479759838b4ecec3d78e0e67fdfde2d671c5c2d7886a47da93885d",
+      "lines": 1437,
+      "blocks": 278
+    },
+    {
+      "id": "stdlib_shutil_py",
+      "path": "corpus/files/stdlib_shutil_py.py",
+      "origin": "CPython 3.12 Lib/shutil.py",
+      "license": "PSF-2.0",
+      "sha256": "819e518cb7a539d09b2526138015541b34d2646afb9c2f6ae4ffd476d6a0fcf4",
+      "lines": 1605,
+      "blocks": 310
+    },
+    {
+      "id": "stdlib_tempfile_py",
+      "path": "corpus/files/stdlib_tempfile_py.py",
+      "origin": "CPython 3.12 Lib/tempfile.py",
+      "license": "PSF-2.0",
+      "sha256": "8c8033ed1426ace79e07a6608887d2a1694d817d63d61b04c3d59339f24b4269",
+      "lines": 1091,
+      "blocks": 207
+    },
+    {
+      "id": "stdlib_textwrap_py",
+      "path": "corpus/files/stdlib_textwrap_py.py",
+      "origin": "CPython 3.12 Lib/textwrap.py",
+      "license": "PSF-2.0",
+      "sha256": "62867e40cdea6669b361f72af4d7daf0359f207c92cbeddfc7c7506397c1f31c",
+      "lines": 491,
+      "blocks": 54
+    },
+    {
+      "id": "stdlib_unittest_case_py",
+      "path": "corpus/files/stdlib_unittest_case_py.py",
+      "origin": "CPython 3.12 Lib/unittest/case.py",
+      "license": "PSF-2.0",
+      "sha256": "45bac6d80a4fc3a0dea8340a80681e30b263f017b4a5002cb8f489a632e0f987",
+      "lines": 1456,
+      "blocks": 275
+    }
+  ]
+}

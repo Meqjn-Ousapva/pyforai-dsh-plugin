@@ -1,0 +1,26 @@
+{
+  "task": "T1_pipeline",
+  "slug": "T1_pipeline__process__dedent_last__01",
+  "drift": "dedent_last",
+  "mode": "visible",
+  "function": "process",
+  "target": {
+    "kind": "if",
+    "lineno": 34,
+    "end_lineno": 38,
+    "col": 4,
+    "span": 5
+  },
+  "anchor_line": 39,
+  "drift_line": 38,
+  "expected_codes": [
+    "E004"
+  ],
+  "diff": "code-dedented",
+  "tests_sha256": "54a9790abf4a3a166da4462df891e9c03de090b2dcb40ae0a56b5bd43f607f30",
+  "hidden_sha256": "748b4d0f008afda6c8b1dbb55bca4436e91b42b2f5b6f883ba4439a49d4d8e70",
+  "start_sha256": "8baf75cdf2f63b409bab77fb452cbbeaf132911bf7c739968b2bc555d443f445",
+  "expected_sha256": "b7ae89b5909ac49f5054df2228748f6e1caa93d7dca3059cc926297bfdaeaed8",
+  "public_failure": "-------------\nTraceback (most recent call last):\n  File \"/tmp/e1-repair-zxdliwc6/tests_public.py\", line 24, in test_process_boom_does_not_abort\n    self.assertIn((\"boom\", \"record\", \"backend unavailable\"), report[\"errors\"])\nAssertionError: ('boom', 'record', 'backend unavailable') not found in []\n\n======================================================================\nFAIL: test_process_inactive_and_error_categories (tests_public.TwoFunctionPublicTests.test_process_inactive_and_error_categories)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/e1-repair-zxdliwc6/tests_public.py\", line 32, in test_process_inactive_and_error_categories\n    self.assertEqual(report[\"missing\"], [\"x\"])\nAssertionError: Lists differ: [] != ['x']\n\nSecond list contains 1 additional elements.\nFirst extra element 0:\n'x'\n\n- []\n+ ['x']\n\n----------------------------------------------------------------------\nRan 5 tests in 0.002s\n\nFAILED (failures=2)\n",
+  "hidden_failure": "\"/tmp/e1-repair-8p5tnfk1/test_hidden.py\", line 167, in test_mixed\n    self._check_process(records, data, True)\n  File \"/tmp/e1-repair-8p5tnfk1/test_hidden.py\", line 140, in _check_process\n    self.assertEqual(actual, expected)\nAssertionError: {'matched': 0, 'missing': [], 'errors': [], 'notified': 0} != {'matched': 32, 'missing': ['inactive'], 'errors': [([253 chars]': 1}\n- {'errors': [], 'matched': 0, 'missing': [], 'notified': 0}\n+ {'errors': [('alpha', 3, 'amount'),\n+             ('alpha', 4, 'currency'),\n+             ('beta', 3, 'amount'),\n+             ('beta', 4, 'currency'),\n+             ('beta', 6, 'status'),\n+             ('beta', 8, 'status'),\n+             ('gamma', 3, 'amount'),\n+             ('gamma', 4, 'currency'),\n+             ('delta', 3, 'amount'),\n+             ('delta', 4, 'currency')],\n+  'matched': 32,\n+  'missing': ['inactive'],\n+  'notified': 1}\n\n----------------------------------------------------------------------\nRan 5 tests in 0.004s\n\nFAILED (failures=8)\n"
+}

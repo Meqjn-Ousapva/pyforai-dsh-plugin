@@ -1,0 +1,26 @@
+{
+  "task": "T8_pipeline",
+  "slug": "T8_pipeline__process__silent__hoist_else__01",
+  "drift": "hoist_else",
+  "mode": "silent",
+  "function": "process",
+  "target": {
+    "kind": "if",
+    "lineno": 53,
+    "end_lineno": 56,
+    "col": 24,
+    "span": 4
+  },
+  "anchor_line": 57,
+  "drift_line": 57,
+  "expected_codes": [
+    "E004"
+  ],
+  "diff": "else-hoist",
+  "tests_sha256": "1696618a5cb4dd912989309a5cfe18007bcdd23a5244fa0a71d509b189c15a8b",
+  "hidden_sha256": "e7147fb96aca9cda6eab38b46b66017b105f9a91f00e8cbff9b7af25d7e3fda5",
+  "start_sha256": "19d7d6e2516be44841f6429a579d11de3de468f3e86bcd4855b53fa0b05df2a6",
+  "expected_sha256": "e62f3fc0febacfc561639cb778fcd1aad2cc6a7160d276687bba963287b02485",
+  "public_failure": "test_audit_isolates_boom (tests_public.TwoFunctionPublicTests.test_audit_isolates_boom) ... ok\ntest_process_boom_does_not_abort (tests_public.TwoFunctionPublicTests.test_process_boom_does_not_abort) ... ok\ntest_process_empty_calls_notifier_once (tests_public.TwoFunctionPublicTests.test_process_empty_calls_notifier_once) ... ok\ntest_process_inactive_and_error_categories (tests_public.TwoFunctionPublicTests.test_process_inactive_and_error_categories) ... ok\ntest_structure (tests_public.TwoFunctionPublicTests.test_structure) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.005s\n\nOK\n",
+  "hidden_failure": "': 1}\n  {'errors': [('alpha', 3, 'amount'), ('alpha', 4, 'currency')],\n-  'matched': 10,\n?             ^^\n\n+  'matched': 8,\n?             ^\n\n   'missing': [],\n   'notified': 1}\n\n======================================================================\nFAIL: test_mixed (test_hidden.TwoFunctionHiddenTests.test_mixed)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/e1-repair-bubkiy6p/test_hidden.py\", line 451, in test_mixed\n    self._check_process(records, data, True)\n  File \"/tmp/e1-repair-bubkiy6p/test_hidden.py\", line 424, in _check_process\n    self.assertEqual(actual, expected)\nAssertionError: {'matched': 116, 'missing': ['inactive'], 'errors': [('[4396 chars]': 1} != {'matched': 114, 'missing': ['inactive'], 'errors': [('[4396 chars]': 1}\nDiff is 7003 characters long. Set self.maxDiff to None to see it.\n\n----------------------------------------------------------------------\nRan 5 tests in 0.011s\n\nFAILED (failures=5)\n"
+}

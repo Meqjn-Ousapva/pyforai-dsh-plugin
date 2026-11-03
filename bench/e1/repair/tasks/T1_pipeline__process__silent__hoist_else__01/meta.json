@@ -1,0 +1,26 @@
+{
+  "task": "T1_pipeline",
+  "slug": "T1_pipeline__process__silent__hoist_else__01",
+  "drift": "hoist_else",
+  "mode": "silent",
+  "function": "process",
+  "target": {
+    "kind": "if",
+    "lineno": 53,
+    "end_lineno": 56,
+    "col": 24,
+    "span": 4
+  },
+  "anchor_line": 57,
+  "drift_line": 57,
+  "expected_codes": [
+    "E004"
+  ],
+  "diff": "else-hoist",
+  "tests_sha256": "54a9790abf4a3a166da4462df891e9c03de090b2dcb40ae0a56b5bd43f607f30",
+  "hidden_sha256": "748b4d0f008afda6c8b1dbb55bca4436e91b42b2f5b6f883ba4439a49d4d8e70",
+  "start_sha256": "da6a5706e2f1099f5639f94ed506ad99d110ba6216793b7c0ef2337848ce209b",
+  "expected_sha256": "b7ae89b5909ac49f5054df2228748f6e1caa93d7dca3059cc926297bfdaeaed8",
+  "public_failure": "test_audit_isolates_boom (tests_public.TwoFunctionPublicTests.test_audit_isolates_boom) ... ok\ntest_process_boom_does_not_abort (tests_public.TwoFunctionPublicTests.test_process_boom_does_not_abort) ... ok\ntest_process_empty_calls_notifier_once (tests_public.TwoFunctionPublicTests.test_process_empty_calls_notifier_once) ... ok\ntest_process_inactive_and_error_categories (tests_public.TwoFunctionPublicTests.test_process_inactive_and_error_categories) ... ok\ntest_structure (tests_public.TwoFunctionPublicTests.test_structure) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.002s\n\nOK\n",
+  "hidden_failure": "e1-repair-9rood9l6/test_hidden.py\", line 167, in test_mixed\n    self._check_process(records, data, True)\n  File \"/tmp/e1-repair-9rood9l6/test_hidden.py\", line 140, in _check_process\n    self.assertEqual(actual, expected)\nAssertionError: {'matched': 34, 'missing': ['inactive'], 'errors': [('[252 chars]': 1} != {'matched': 32, 'missing': ['inactive'], 'errors': [('[252 chars]': 1}\n  {'errors': [('alpha', 3, 'amount'),\n              ('alpha', 4, 'currency'),\n              ('beta', 3, 'amount'),\n              ('beta', 4, 'currency'),\n              ('beta', 6, 'status'),\n              ('beta', 8, 'status'),\n              ('gamma', 3, 'amount'),\n              ('gamma', 4, 'currency'),\n              ('delta', 3, 'amount'),\n              ('delta', 4, 'currency')],\n-  'matched': 34,\n?              ^\n\n+  'matched': 32,\n?              ^\n\n   'missing': ['inactive'],\n   'notified': 1}\n\n----------------------------------------------------------------------\nRan 5 tests in 0.008s\n\nFAILED (failures=5)\n"
+}

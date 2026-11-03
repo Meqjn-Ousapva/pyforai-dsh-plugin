@@ -1,0 +1,4 @@
+# Optional: needed for the black-interaction part of run_drift.
+# Install into the local .deps directory so the repo stays clean:
+#   python -m pip install --target bench/e1/.deps -r bench/e1/requirements.txt
+black==26.10.1

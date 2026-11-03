@@ -1,0 +1,1157 @@
+[
+  {
+    "file": "repo_bench_calibrate_generate_py",
+    "target": "repo_bench_calibrate_generate_py:10:if:465-469:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_py",
+    "target": "repo_bench_calibrate_generate_py:8:def:444-450:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_py",
+    "target": "repo_bench_calibrate_generate_py:13:with:475-492:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_py",
+    "target": "repo_bench_calibrate_generate_py:12:for:474-492:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_py",
+    "target": "repo_bench_calibrate_generate_py:9:def:453-469:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_py",
+    "target": "repo_bench_calibrate_generate_py:2:for:400-404:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_py",
+    "target": "repo_bench_calibrate_generate_py:18:for:519-524:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_t_py",
+    "target": "repo_bench_calibrate_generate_t_py:5:def:315-318:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_t_py",
+    "target": "repo_bench_calibrate_generate_t_py:13:if:363-368:16",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_t_py",
+    "target": "repo_bench_calibrate_generate_t_py:16:for:384-389:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_t_py",
+    "target": "repo_bench_calibrate_generate_t_py:12:for:356-368:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_t_py",
+    "target": "repo_bench_calibrate_generate_t_py:11:with:351-368:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_t_py",
+    "target": "repo_bench_calibrate_generate_t_py:10:for:350-368:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_calibrate_generate_t_py",
+    "target": "repo_bench_calibrate_generate_t_py:8:def:334-345:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_harness_py",
+    "target": "repo_bench_harness_py:30:if:296-300:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_harness_py",
+    "target": "repo_bench_harness_py:54:def:534-543:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_harness_py",
+    "target": "repo_bench_harness_py:43:def:359-395:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_harness_py",
+    "target": "repo_bench_harness_py:14:for:162-205:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_harness_py",
+    "target": "repo_bench_harness_py:17:for:168-205:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_harness_py",
+    "target": "repo_bench_harness_py:19:for:171-205:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_harness_py",
+    "target": "repo_bench_harness_py:20:if:174-178:16",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_bench_harness_py",
+    "target": "repo_bench_harness_py:37:for:333-340:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_anchors_py",
+    "target": "repo_pyforai_anchors_py:44:try:248-253:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_anchors_py",
+    "target": "repo_pyforai_anchors_py:18:class:119-129:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_anchors_py",
+    "target": "repo_pyforai_anchors_py:43:def:239-254:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_anchors_py",
+    "target": "repo_pyforai_anchors_py:12:class:82-105:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_anchors_py",
+    "target": "repo_pyforai_anchors_py:32:for:196-206:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_anchors_py",
+    "target": "repo_pyforai_anchors_py:17:class:109-115:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_anchors_py",
+    "target": "repo_pyforai_anchors_py:22:for:157-164:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:40:while:373-381:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:27:def:286-298:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:31:def:301-327:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:11:for:133-257:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:18:if:199-227:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:22:for:262-281:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:0:class:38-56:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:23:for:263-281:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:2:class:60-64:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:19:if:211-216:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_checker_py",
+    "target": "repo_pyforai_checker_py:6:class:84-90:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_cli_py",
+    "target": "repo_pyforai_cli_py:8:def:68-74:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_cli_py",
+    "target": "repo_pyforai_cli_py:47:if:293-305:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_cli_py",
+    "target": "repo_pyforai_cli_py:34:try:212-233:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_cli_py",
+    "target": "repo_pyforai_cli_py:27:for:144-187:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_cli_py",
+    "target": "repo_pyforai_cli_py:33:for:211-240:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_cli_py",
+    "target": "repo_pyforai_cli_py:37:if:237-240:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_cli_py",
+    "target": "repo_pyforai_cli_py:52:def:342-349:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:90:if:470-473:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:80:def:422-428:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:5:def:77-92:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:4:class:74-131:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:27:def:184-203:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:2:class:54-71:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:28:if:190-194:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:25:if:175-180:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_pyforai_editor_py",
+    "target": "repo_pyforai_editor_py:41:if:242-247:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:12:def:94-101:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:22:def:153-162:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:9:def:73-86:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:1:class:14-90:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:11:class:93-149:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:21:class:152-172:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:25:def:176-179:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:26:def:181-186:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "repo_tests_test_checker_py",
+    "target": "repo_tests_test_checker_py:3:def:28-35:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_argparse_py",
+    "target": "stdlib_argparse_py:92:if:560-564:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_argparse_py",
+    "target": "stdlib_argparse_py:380:with:2223-2231:20",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_argparse_py",
+    "target": "stdlib_argparse_py:186:class:1091-1115:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_argparse_py",
+    "target": "stdlib_argparse_py:306:class:1754-2677:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_argparse_py",
+    "target": "stdlib_argparse_py:20:def:211-214:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_argparse_py",
+    "target": "stdlib_argparse_py:54:if:367-370:24",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_argparse_py",
+    "target": "stdlib_argparse_py:60:if:395-398:20",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_configparser_py",
+    "target": "stdlib_configparser_py:45:if:408-412:16",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_configparser_py",
+    "target": "stdlib_configparser_py:60:if:470-477:20",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_configparser_py",
+    "target": "stdlib_configparser_py:136:def:883-901:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_configparser_py",
+    "target": "stdlib_configparser_py:72:class:541-1172:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_configparser_py",
+    "target": "stdlib_configparser_py:161:def:974-1096:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_configparser_py",
+    "target": "stdlib_configparser_py:4:def:185-188:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_configparser_py",
+    "target": "stdlib_configparser_py:98:def:707-710:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_configparser_py",
+    "target": "stdlib_configparser_py:127:for:846-849:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_contextlib_py",
+    "target": "stdlib_contextlib_py:104:def:640-643:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_contextlib_py",
+    "target": "stdlib_contextlib_py:123:if:749-757:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_contextlib_py",
+    "target": "stdlib_contextlib_py:125:class:761-785:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_contextlib_py",
+    "target": "stdlib_contextlib_py:102:class:622-758:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_contextlib_py",
+    "target": "stdlib_contextlib_py:63:def:393-396:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_contextlib_py",
+    "target": "stdlib_contextlib_py:67:class:423-426:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_contextlib_py",
+    "target": "stdlib_contextlib_py:87:def:543-546:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:19:if:127-131:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:5:class:57-64:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:69:for:409-432:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:32:class:172-451:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:8:class:83-134:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:52:while:317-366:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:1:def:45-48:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:37:class:196-199:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_csv_py",
+    "target": "stdlib_csv_py:66:if:374-377:16",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:170:if:1487-1491:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:92:for:950-959:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:142:def:1301-1322:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:17:class:295-356:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:144:def:1325-1379:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:145:if:1326-1379:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:54:if:603-606:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:174:def:1504-1507:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_dataclasses_py",
+    "target": "stdlib_dataclasses_py:185:if:1570-1574:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:145:if:826-830:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:72:if:398-405:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:138:def:774-798:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:94:if:540-621:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:63:class:347-416:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:99:def:566-621:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:152:def:852-902:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:50:if:287-290:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:92:def:518-521:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_functools_py",
+    "target": "stdlib_functools_py:172:def:965-968:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_json_encoder_py",
+    "target": "stdlib_json_encoder_py:70:if:402-405:16",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_json_encoder_py",
+    "target": "stdlib_json_encoder_py:8:try:55-67:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_json_encoder_py",
+    "target": "stdlib_json_encoder_py:39:if:304-326:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_json_encoder_py",
+    "target": "stdlib_json_encoder_py:10:class:74-258:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_json_encoder_py",
+    "target": "stdlib_json_encoder_py:33:if:282-286:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_json_encoder_py",
+    "target": "stdlib_json_encoder_py:50:if:338-342:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_json_encoder_py",
+    "target": "stdlib_json_encoder_py:82:if:434-438:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_pathlib_py",
+    "target": "stdlib_pathlib_py:43:def:233-237:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_pathlib_py",
+    "target": "stdlib_pathlib_py:16:def:154-161:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_pathlib_py",
+    "target": "stdlib_pathlib_py:232:with:1137-1150:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_pathlib_py",
+    "target": "stdlib_pathlib_py:228:while:1119-1157:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_pathlib_py",
+    "target": "stdlib_pathlib_py:238:if:1160-1163:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_pathlib_py",
+    "target": "stdlib_pathlib_py:248:if:1224-1227:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_pathlib_py",
+    "target": "stdlib_pathlib_py:52:def:267-271:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_shutil_py",
+    "target": "stdlib_shutil_py:37:if:208-212:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_shutil_py",
+    "target": "stdlib_shutil_py:170:try:812-819:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_shutil_py",
+    "target": "stdlib_shutil_py:141:if:685-706:20",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_shutil_py",
+    "target": "stdlib_shutil_py:148:def:724-820:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_shutil_py",
+    "target": "stdlib_shutil_py:230:if:1099-1102:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_shutil_py",
+    "target": "stdlib_shutil_py:251:if:1202-1205:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_shutil_py",
+    "target": "stdlib_shutil_py:258:if:1230-1233:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_shutil_py",
+    "target": "stdlib_shutil_py:76:def:373-377:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:28:try:155-159:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:181:def:972-978:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:195:try:1038-1062:16",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:144:class:824-996:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:0:try:43-181:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:188:class:999-1091:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:132:def:716-719:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:193:if:1033-1036:16",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_tempfile_py",
+    "target": "stdlib_tempfile_py:198:if:1055-1058:24",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_textwrap_py",
+    "target": "stdlib_textwrap_py:56:if:488-491:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_textwrap_py",
+    "target": "stdlib_textwrap_py:2:def:143-154:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_textwrap_py",
+    "target": "stdlib_textwrap_py:1:def:112-137:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_textwrap_py",
+    "target": "stdlib_textwrap_py:0:class:17-368:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_textwrap_py",
+    "target": "stdlib_textwrap_py:21:while:266-337:8",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_textwrap_py",
+    "target": "stdlib_textwrap_py:10:def:197-230:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_textwrap_py",
+    "target": "stdlib_textwrap_py:33:if:332-335:28",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_textwrap_py",
+    "target": "stdlib_textwrap_py:31:if:322-326:24",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:54:if:259-263:12",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:72:def:336-342:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:248:def:1318-1335:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:76:class:345-1361:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:180:def:976-1073:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:119:def:599-662:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:167:def:896-939:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:202:def:1104-1145:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:18:def:122-125:0",
+    "anchors": 1,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:28:if:162-165:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  },
+  {
+    "file": "stdlib_unittest_case_py",
+    "target": "stdlib_unittest_case_py:84:def:458-461:4",
+    "anchors": 0,
+    "errors": 0,
+    "codes": []
+  }
+]

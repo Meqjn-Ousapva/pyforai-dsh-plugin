@@ -1,0 +1,2912 @@
+{
+  "generated": "2026-11-03T14:59:25+0800",
+  "cases": 592,
+  "files": 20,
+  "detection": {
+    "expected": 476,
+    "detected": 476,
+    "rate": 1.0
+  },
+  "strict": {
+    "expected": 536,
+    "detected": 536,
+    "rate": 1.0
+  },
+  "expected_match": 588,
+  "expected_match_rate": 0.9932432432432432,
+  "by_drift": {
+    "kind_mismatch": {
+      "n": 60,
+      "expected_detect": 60,
+      "detected": 60,
+      "detection_rate": 1.0,
+      "strict_expected": 60,
+      "strict_detected": 60,
+      "strict_rate": 1.0,
+      "mean_line_distance": 0.0,
+      "codes": {
+        "E001": 60
+      },
+      "expected_match": 60
+    },
+    "wrong_column": {
+      "n": 60,
+      "expected_detect": 60,
+      "detected": 60,
+      "detection_rate": 1.0,
+      "strict_expected": 60,
+      "strict_detected": 60,
+      "strict_rate": 1.0,
+      "mean_line_distance": 0.0,
+      "codes": {
+        "E002": 60
+      },
+      "expected_match": 60
+    },
+    "inside_block": {
+      "n": 60,
+      "expected_detect": 60,
+      "detected": 60,
+      "detection_rate": 1.0,
+      "strict_expected": 60,
+      "strict_detected": 60,
+      "strict_rate": 1.0,
+      "mean_line_distance": 0.0,
+      "codes": {
+        "E003": 60
+      },
+      "expected_match": 60
+    },
+    "not_adjacent": {
+      "n": 60,
+      "expected_detect": 60,
+      "detected": 60,
+      "detection_rate": 1.0,
+      "strict_expected": 60,
+      "strict_detected": 60,
+      "strict_rate": 1.0,
+      "mean_line_distance": 1.0,
+      "codes": {
+        "E004": 60
+      },
+      "expected_match": 60
+    },
+    "duplicate": {
+      "n": 60,
+      "expected_detect": 60,
+      "detected": 60,
+      "detection_rate": 1.0,
+      "strict_expected": 60,
+      "strict_detected": 60,
+      "strict_rate": 1.0,
+      "mean_line_distance": 1.0,
+      "codes": {
+        "E005": 60
+      },
+      "expected_match": 60
+    },
+    "trailing_code": {
+      "n": 60,
+      "expected_detect": 60,
+      "detected": 60,
+      "detection_rate": 1.0,
+      "strict_expected": 60,
+      "strict_detected": 60,
+      "strict_rate": 1.0,
+      "mean_line_distance": 0.0,
+      "codes": {
+        "E007": 60
+      },
+      "expected_match": 60
+    },
+    "outer_before_inner": {
+      "n": 58,
+      "expected_detect": 58,
+      "detected": 58,
+      "detection_rate": 1.0,
+      "strict_expected": 58,
+      "strict_detected": 58,
+      "strict_rate": 1.0,
+      "mean_line_distance": 0.06896551724137931,
+      "codes": {
+        "E008": 54,
+        "E005": 4
+      },
+      "expected_match": 54
+    },
+    "dedent_last": {
+      "n": 58,
+      "expected_detect": 58,
+      "detected": 58,
+      "detection_rate": 1.0,
+      "strict_expected": 58,
+      "strict_detected": 58,
+      "strict_rate": 1.0,
+      "mean_line_distance": 0.0,
+      "codes": {
+        "E004": 58
+      },
+      "expected_match": 58
+    },
+    "missing_anchor": {
+      "n": 60,
+      "expected_detect": 0,
+      "detected": 0,
+      "detection_rate": null,
+      "strict_expected": 60,
+      "strict_detected": 60,
+      "strict_rate": 1.0,
+      "mean_line_distance": null,
+      "codes": {},
+      "expected_match": 60
+    },
+    "consistent_shift": {
+      "n": 56,
+      "expected_detect": 0,
+      "detected": 0,
+      "detection_rate": null,
+      "strict_expected": 0,
+      "strict_detected": 0,
+      "strict_rate": null,
+      "mean_line_distance": null,
+      "codes": {},
+      "expected_match": 56
+    }
+  },
+  "by_file": {
+    "repo_bench_calibrate_generate_py": {
+      "n": 29,
+      "detected": 24,
+      "expected": 24
+    },
+    "repo_bench_calibrate_generate_t_py": {
+      "n": 28,
+      "detected": 23,
+      "expected": 23
+    },
+    "repo_bench_harness_py": {
+      "n": 29,
+      "detected": 23,
+      "expected": 23
+    },
+    "repo_pyforai_anchors_py": {
+      "n": 29,
+      "detected": 23,
+      "expected": 23
+    },
+    "repo_pyforai_checker_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "repo_pyforai_cli_py": {
+      "n": 27,
+      "detected": 23,
+      "expected": 23
+    },
+    "repo_pyforai_editor_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "repo_tests_test_checker_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_argparse_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_configparser_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_contextlib_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_csv_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_dataclasses_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_functools_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_json_encoder_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_pathlib_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_shutil_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_tempfile_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_textwrap_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    },
+    "stdlib_unittest_case_py": {
+      "n": 30,
+      "detected": 24,
+      "expected": 24
+    }
+  },
+  "clean": {
+    "clean_cases": 165,
+    "clean_false_positives": 0,
+    "clean_false_positive_rate": 0.0
+  },
+  "formatter": {
+    "black_version": null,
+    "rows": [
+      {
+        "file": "repo_bench_calibrate_generate_py",
+        "lines": 533,
+        "fmt_ok": true,
+        "fmt_output": "nch_block(kinds))\n     )\n+# end def\n \n \n def build_reference(kinds: list[str]) -> str:\n@@ -424,6 +428,7 @@\n     classes = start.split(\"def process(\", 1)[0]\n     reference = build_reference(kinds).replace(\"def reference_process(\", \"def process(\", 1)\n     return classes + reference\n+# end def\n \n \n def build_task(task: str, kinds: list[str], structural: bool) -> str:\n@@ -432,6 +437,7 @@\n         .replace(\"__N__\", str(len(kinds)))\n         .replace(\"__CONSTRAINT__\", CONSTRAINT if structural else \"\")\n     )\n+# end def\n \n \n def build_public(task: str, structural: bool) -> str:\n@@ -439,6 +445,7 @@\n         PUBLIC_TEMPLATE.replace(\"__TASK__\", task)\n         .replace(\"__STRUCTURE__\", STRUCTURE_TEST if structural else \"\")\n     )\n+# end def\n \n \n def build_hidden(task: str, kinds: list[str], structural: bool) -> str:\n@@ -448,6 +455,7 @@\n         .replace(\"__KINDS__\", repr(kinds))\n         .replace(\"__STRUCTURE__\", STRUCTURE_TEST if structural else \"\")\n     )\n+# end def\n \n \n def write_task(\n@@ -467,6 +475,8 @@\n         (reference_dir / f\"{task}.py\").write_text(\n             build_reference_solution(kinds), encoding=\"utf-8\"\n         )\n+    # end if\n+# end def\n \n \n def validate(tasks: list[tuple[str, list[str]]], reference_dir: Path) -> bool:\n@@ -490,7 +500,12 @@\n                     print((proc.stdout + proc.stderr)[-2000:])\n                 else:\n                     print(f\"ok {task} {module}\")\n+                # end if\n+            # end for\n+        # end with\n+    # end for\n     return ok\n+# end def\n \n \n def main() -> int:\n@@ -522,11 +537,13 @@\n         write_task(task, kinds, structural, reference_dir)\n         tasks.append((task, kinds))\n         print(f\"generated {task}: {count} kinds, {len(kinds) * 7 + 30}ish lines\")\n+    # end for\n \n     if args.validate:\n         if not validate(tasks, reference_dir):\n             return 1\n     return 0\n+# end def\n \n \n if __name__ == \"__main__\":\n/tmp/e1-fmt-5meyyj5b/file.py: fmt: inserted 17 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 10,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": true,
+        "fmt_strict_errors": 0,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "repo_bench_calibrate_generate_t_py",
+        "lines": 397,
+        "fmt_ok": true,
+        "fmt_output": "--- a/tmp/e1-fmt-e60z5x_5/file.py\n+++ b/tmp/e1-fmt-e60z5x_5/file.py\n@@ -329,6 +329,7 @@\n         .replace(\"__REFERENCE__\", reference.rstrip())\n         .replace(\"__KINDS__\", repr(kinds))\n     )\n+# end def\n \n \n def write_task(task: str, kinds: list[str], reference_dir: Path) -> None:\n@@ -343,6 +344,7 @@\n     (reference_dir / f\"{task}.py\").write_text(\n         build_reference_solution_file(kinds), encoding=\"utf-8\"\n     )\n+# end def\n \n \n def validate(tasks: list[tuple[str, list[str]]], reference_dir: Path) -> bool:\n@@ -366,7 +368,12 @@\n                     print((proc.stdout + proc.stderr)[-2000:])\n                 else:\n                     print(f\"ok {task} {module}\")\n+                # end if\n+            # end for\n+        # end with\n+    # end for\n     return ok\n+# end def\n \n \n def main() -> int:\n@@ -387,10 +394,12 @@\n         write_task(task, kinds, reference_dir)\n         tasks.append((task, kinds))\n         print(f\"generated {task}: {count} kinds, two functions\")\n+    # end for\n \n     if args.validate and not validate(tasks, reference_dir):\n         return 1\n     return 0\n+# end def\n \n \n if __name__ == \"__main__\":\n/tmp/e1-fmt-e60z5x_5/file.py: fmt: inserted 9 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 4,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": true,
+        "fmt_strict_errors": 0,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "repo_bench_harness_py",
+        "lines": 576,
+        "fmt_ok": true,
+        "fmt_output": " return 0\n+# end def\n \n \n def _mean(values: list[Optional[int | float]]) -> Optional[float]:\n@@ -346,6 +367,7 @@\n     if not present:\n         return None\n     return sum(present) / len(present)\n+# end def\n \n \n def _fmt(value: Optional[int | float], digits: int = 1) -> str:\n@@ -354,6 +376,7 @@\n     if isinstance(value, float):\n         return f\"{value:.{digits}f}\"\n     return str(value)\n+# end def\n \n \n def _aggregate(metrics: list[dict]) -> list[dict]:\n@@ -392,7 +415,9 @@\n                 \"tampered\": sum(1 for m in group if m[\"tampered_tests\"]),\n             }\n         )\n+    # end for\n     return rows\n+# end def\n \n \n def _markdown_table(headers: list[str], rows: list[list[str]]) -> str:\n@@ -401,6 +426,7 @@\n     for row in rows:\n         lines.append(\"| \" + \" | \".join(row) + \" |\")\n     return \"\\n\".join(lines)\n+# end def\n \n \n def cmd_report(args: argparse.Namespace) -> int:\n@@ -427,6 +453,7 @@\n                 \"TAMPERED\" if m[\"tampered_tests\"] else \"\",\n             ]\n         )\n+    # end for\n \n     aggregate_rows = []\n     for row in _aggregate(metrics):\n@@ -448,6 +475,7 @@\n                 str(row[\"tampered\"]),\n             ]\n         )\n+    # end for\n \n     per_run = _markdown_table(\n         [\n@@ -527,8 +555,10 @@\n         writer.writeheader()\n         for m in metrics:\n             writer.writerow(m)\n+    # end with\n     print(f\"\\nwrote {csv_path}\")\n     return 0\n+# end def\n \n \n def cmd_list(args: argparse.Namespace) -> int:\n@@ -540,7 +570,9 @@\n             m = json.loads(metrics_path.read_text(encoding=\"utf-8\"))\n             status = f\"public={m['public_pass']} hidden={m['hidden_pass']}\"\n         print(f\"{run_dir.name}: {status}\")\n+    # end for\n     return 0\n+# end def\n \n \n def build_parser() -> argparse.ArgumentParser:\n@@ -565,6 +597,7 @@\n     list_parser.set_defaults(func=cmd_list)\n \n     return parser\n+# end def\n \n \n def main(argv: Optional[list[str]] = None) -> int:\n/tmp/e1-fmt-g97nc9so/file.py: fmt: inserted 33 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 15,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": true,
+        "fmt_strict_errors": 0,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "repo_pyforai_anchors_py",
+        "lines": 273,
+        "fmt_ok": true,
+        "fmt_output": "n anchors\n+# end def\n \n \n def logical_starts(src: str) -> list[tuple[int, int]]:\n@@ -196,17 +209,24 @@\n         for tok in tokenize.generate_tokens(io.StringIO(src).readline):\n             if tok.type in (tokenize.ENCODING, tokenize.NL, tokenize.COMMENT):\n                 continue\n+            # end if\n             if tok.type in (tokenize.NEWLINE, tokenize.INDENT, tokenize.DEDENT):\n                 at_start = True\n                 continue\n+            # end if\n             if tok.type == tokenize.ENDMARKER:\n                 break\n+            # end if\n             if at_start:\n                 starts.append(tok.start)\n                 at_start = False\n+            # end if\n+        # end for\n     except (tokenize.TokenError, IndentationError):\n         pass\n+    # end try\n     return starts\n+# end def\n \n \n def detect_newline(text: str) -> str:\n@@ -216,6 +236,7 @@\n     if crlf != -1 and (lf == -1 or crlf <= lf):\n         return \"\\r\\n\"\n     return \"\\n\"\n+# end def\n \n \n def leading_ws(line: str) -> str:\n@@ -224,6 +245,7 @@\n     while index < len(line) and line[index] in \" \\t\":\n         index += 1\n     return line[:index]\n+# end def\n \n \n def is_blank(line: str) -> bool:\n@@ -249,9 +271,12 @@\n         for tok in tokenize.generate_tokens(io.StringIO(src).readline):\n             if tok.type in _STRING_TOKENS and tok.start[0] != tok.end[0]:\n                 skip.update(range(tok.start[0] + 1, tok.end[0] + 1))\n+            # end if\n     except (tokenize.TokenError, IndentationError):\n         pass\n+    # end try\n     return skip\n+# end def\n \n \n def block_at_header(\n@@ -262,6 +287,7 @@\n     if not matches:\n         return None\n     return min(matches, key=lambda b: (b.col, b.end_lineno))\n+# end def\n \n \n def contains_block(outer: Block, inner: Block) -> bool:\n@@ -271,3 +297,4 @@\n         and outer.lineno <= inner.lineno\n         and inner.end_lineno <= outer.end_lineno\n     )\n+# end def\n/tmp/e1-fmt-fxk_vn3y/file.py: fmt: inserted 27 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 13,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": true,
+        "fmt_strict_errors": 0,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "repo_pyforai_checker_py",
+        "lines": 382,
+        "fmt_ok": true,
+        "fmt_output": "67,11 @@\n                 )\n             )\n             continue\n+        # end if\n \n         consumed.add(candidate.key)\n         matches.append(Match(anchor, candidate))\n+    # end for\n \n     # Anchors close blocks; if an inner block has an anchor it must be closed\n     # before the enclosing block's anchor.\n@@ -263,10 +280,12 @@\n         for inner in matches:\n             if outer is inner:\n                 continue\n+            # end if\n             if contains_block(outer.block, inner.block) and outer.anchor.lineno < inner.anchor.lineno:\n                 key = (outer.anchor.lineno, outer.anchor.col)\n                 if key in reported:\n                     continue\n+                # end if\n                 reported.add(key)\n                 diagnostics.append(\n                     Diagnostic(\n@@ -279,8 +298,12 @@\n                         hint=f\"move `# end {outer.block.kind}` after line {inner.anchor.lineno}\",\n                     )\n                 )\n+            # end if\n+        # end for\n+    # end for\n \n     return diagnostics, matches\n+# end def\n \n \n def _block_depths(tree: ast.AST) -> dict[tuple[int, int], int]:\n@@ -293,9 +316,11 @@\n             depth += 1\n         for child in ast.iter_child_nodes(node):\n             visit(child, depth)\n+    # end def\n \n     visit(tree, 0)\n     return depths\n+# end def\n \n \n def _missing_anchors(\n@@ -324,7 +349,10 @@\n                     \"(or run `pyforai fmt`)\",\n                 )\n             )\n+        # end if\n+    # end for\n     return diagnostics\n+# end def\n \n \n def plan_fmt(\n@@ -359,7 +387,9 @@\n                 prefix=leading_ws(model.lines[block.lineno - 1]),\n             )\n         )\n+    # end for\n     return plan\n+# end def\n \n \n def _anchor_insertion_line(model: SourceModel, block: Block) -> int:\n@@ -379,4 +409,6 @@\n             line += 1\n             continue\n         break\n+    # end while\n     return line\n+# end def\n/tmp/e1-fmt-np2immob/file.py: fmt: inserted 32 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 10,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 1,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "repo_pyforai_cli_py",
+        "lines": 425,
+        "fmt_ok": true,
+        "fmt_output": "rint(f\"{path}: fmt: {result.detail}\")\n+    # end for\n     if args.json:\n         print(\n             json.dumps(\n@@ -248,7 +274,9 @@\n         )\n     else:\n         print(f\"fmt: {changed} file(s) changed, {len(paths)} checked\")\n+    # end if\n     return 1 if failed else 0\n+# end def\n \n \n def cmd_wrap(args: argparse.Namespace) -> int:\n@@ -267,6 +295,9 @@\n                     args,\n                 )\n                 return 1\n+            # end try\n+        # end if\n+    # end if\n     try:\n         result = wrap(\n             args.file,\n@@ -284,8 +315,10 @@\n     except EditError as exc:\n         _emit_failure(Path(args.file), \"wrap\", exc, args)\n         return 1\n+    # end try\n     _emit_result(result, args)\n     return 0\n+# end def\n \n \n def cmd_replace(args: argparse.Namespace) -> int:\n@@ -303,8 +336,11 @@\n                     args,\n                 )\n                 return 1\n+            # end try\n+        # end if\n     else:\n         code = args.code\n+    # end if\n     try:\n         result = replace_body(\n             args.file,\n@@ -317,8 +353,10 @@\n     except EditError as exc:\n         _emit_failure(Path(args.file), \"replace-body\", exc, args)\n         return 1\n+    # end try\n     _emit_result(result, args)\n     return 0\n+# end def\n \n \n def cmd_move(args: argparse.Namespace) -> int:\n@@ -335,8 +373,10 @@\n     except EditError as exc:\n         _emit_failure(Path(args.file), \"move\", exc, args)\n         return 1\n+    # end try\n     _emit_result(result, args)\n     return 0\n+# end def\n \n \n def _add_target(parser: argparse.ArgumentParser) -> None:\n@@ -347,6 +387,7 @@\n         type=_parse_anchor,\n         help=\"LINE:COL of an existing anchor (column is 0-based)\",\n     )\n+# end def\n \n \n def build_parser() -> argparse.ArgumentParser:\n@@ -413,6 +454,7 @@\n     move_parser.set_defaults(func=cmd_move)\n \n     return parser\n+# end def\n \n \n def main(argv: Optional[list[str]] = None) -> int:\n/tmp/e1-fmt-ekpk0zy8/file.py: fmt: inserted 42 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 14,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 2,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "repo_pyforai_editor_py",
+        "lines": 537,
+        "fmt_ok": true,
+        "fmt_output": "del, matches: list[Match], stmt: ast.stmt) -> int:\n@@ -425,7 +464,9 @@\n         if block is not None:\n             _, end = block_span(doc, block, matches, include_anchor=True)\n             return end\n+    # end if\n     return stmt.end_lineno or stmt.lineno\n+# end def\n \n \n def move(\n@@ -471,13 +512,16 @@\n             enclosing = next((b for b in model.blocks if b.node is statement), None)\n             if enclosing is not None:\n                 statement_start = enclosing.first_line\n+            # end if\n         if before_line is not None:\n             dest_pos = statement_start - 1\n             destination_desc = f\"before line {before_line}\"\n         else:\n             dest_pos = _statement_span_end(doc, model, result.matches, statement)\n             destination_desc = f\"after line {after_line}\"\n+        # end if\n         dest_indent = leading_ws(doc.lines[statement_start - 1])\n+    # end if\n \n     if start <= dest_pos <= end:\n         raise EditError(\"destination is inside the block being moved\")\n@@ -494,6 +538,7 @@\n             reindented.append(moved_line)\n         else:\n             reindented.append(_reindent_line(moved_line, old_prefix, dest_indent))\n+    # end for\n \n     remaining[dest_pos:dest_pos] = reindented\n     try:\n@@ -503,9 +548,11 @@\n             f\"moving this block would break the file at line {exc.lineno}: {exc.msg}; \"\n             \"the source block may be the only statement in its parent\"\n         ) from exc\n+    # end try\n \n     doc.lines = remaining\n     return doc.commit(\"move\", dry_run, detail=f\"moved `{block.kind}` from line {block.lineno} {destination_desc}\")\n+# end def\n \n \n def fmt(\n@@ -535,3 +582,4 @@\n         anchor_line = f\"{insertion.prefix}# end {insertion.kind}{doc.newline}\"\n         doc._splice(insertion.after_line, insertion.after_line, [anchor_line])\n     return doc.commit(\"fmt\", dry_run, detail=f\"inserted {len(plan)} anchor(s)\")\n+# end def\n/tmp/e1-fmt-fdh8eolb/file.py: fmt: inserted 48 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 20,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 3,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "repo_tests_test_checker_py",
+        "lines": 190,
+        "fmt_ok": true,
+        "fmt_output": "ode_is_not_anchor(self) -> None:\n         src = \"if a:\\n    pass\\n# end if\\n\"\n         self.assertTrue(check_source(src).ok)\n+# end class\n \n \n class InvalidAnchors(unittest.TestCase):\n@@ -99,6 +105,7 @@\n             \"# end if\\n\"\n         )\n         self.assertIn(\"E001\", codes(src))\n+    # end def\n \n     def test_no_block_at_col(self) -> None:\n         src = \"if a:\\n    pass\\n    # end if\\n\"\n@@ -113,6 +120,7 @@\n             \"    g()\\n\"\n         )\n         self.assertIn(\"E003\", codes(src))\n+    # end def\n \n     def test_not_adjacent(self) -> None:\n         src = (\n@@ -122,6 +130,7 @@\n             \"# end if\\n\"\n         )\n         self.assertIn(\"E004\", codes(src))\n+    # end def\n \n     def test_duplicate(self) -> None:\n         src = \"if a:\\n    pass\\n# end if\\n# end if\\n\"\n@@ -140,6 +149,7 @@\n             \"    # end for\\n\"\n         )\n         self.assertIn(\"E008\", codes(src))\n+    # end def\n \n     def test_syntax_error(self) -> None:\n         self.assertIn(\"E100\", codes(\"def f(:\\n    pass\\n\"))\n@@ -147,6 +157,7 @@\n     def test_stale_anchor(self) -> None:\n         src = \"x = 1\\n# end if\\n\"\n         self.assertIn(\"E002\", codes(src))\n+# end class\n \n \n class StrictMode(unittest.TestCase):\n@@ -160,6 +171,7 @@\n         )\n         self.assertIn(\"E010\", codes(src, strict=True, min_lines=3, min_depth=10))\n         self.assertNotIn(\"E010\", codes(src, strict=True, min_lines=99, min_depth=99))\n+    # end def\n \n     def test_deep_block(self) -> None:\n         src = (\n@@ -170,6 +182,8 @@\n             \"                pass\\n\"\n         )\n         self.assertIn(\"E010\", codes(src, strict=True, min_lines=99, min_depth=3))\n+    # end def\n+# end class\n \n \n class ResultShape(unittest.TestCase):\n@@ -184,6 +198,8 @@\n         self.assertEqual(payload[\"code\"], \"E002\")\n         self.assertIn(\"line\", payload)\n         self.assertIn(\"hint\", payload)\n+    # end def\n+# end class\n \n \n if __name__ == \"__main__\":\n/tmp/e1-fmt-pq9_c8sp/file.py: fmt: inserted 16 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 4,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": true,
+        "fmt_strict_errors": 0,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_argparse_py",
+        "lines": 2677,
+        "fmt_ok": true,
+        "fmt_output": "ction.type, action.type)\n@@ -2587,9 +2880,11 @@\n             args = {'type': name, 'value': arg_string}\n             msg = _('invalid %(type)s value: %(value)r')\n             raise ArgumentError(action, msg % args)\n+        # end try\n \n         # return the converted value\n         return result\n+    # end def\n \n     def _check_value(self, action, value):\n         # converted value must be one of the choices (if specified)\n@@ -2598,6 +2893,8 @@\n                     'choices': ', '.join(map(repr, action.choices))}\n             msg = _('invalid choice: %(value)r (choose from %(choices)s)')\n             raise ArgumentError(action, msg % args)\n+        # end if\n+    # end def\n \n     # =======================\n     # Help-formatting methods\n@@ -2607,6 +2904,7 @@\n         formatter.add_usage(self.usage, self._actions,\n                             self._mutually_exclusive_groups)\n         return formatter.format_help()\n+    # end def\n \n     def format_help(self):\n         formatter = self._get_formatter()\n@@ -2624,12 +2922,14 @@\n             formatter.add_text(action_group.description)\n             formatter.add_arguments(action_group._group_actions)\n             formatter.end_section()\n+        # end for\n \n         # epilog\n         formatter.add_text(self.epilog)\n \n         # determine help from format above\n         return formatter.format_help()\n+    # end def\n \n     def _get_formatter(self):\n         return self.formatter_class(prog=self.prog)\n@@ -2654,6 +2954,9 @@\n                 file.write(message)\n             except (AttributeError, OSError):\n                 pass\n+            # end try\n+        # end if\n+    # end def\n \n     # ===============\n     # Exiting methods\n@@ -2675,3 +2978,5 @@\n         self.print_usage(_sys.stderr)\n         args = {'prog': self.prog, 'message': message}\n         self.exit(2, _('%(prog)s: error: %(message)s\\n') % args)\n+    # end def\n+# end class\n/tmp/e1-fmt-x8tlqxfw/file.py: fmt: inserted 305 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 29,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 37,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_configparser_py",
+        "lines": 1333,
+        "fmt_ok": true,
+        "fmt_output": "onv\n             getter = functools.partial(self.get, _impl=getattr(parser, key))\n             setattr(self, key, getter)\n+    # end def\n \n     def __repr__(self):\n         return '<Section: {}>'.format(self._name)\n@@ -1247,6 +1393,7 @@\n             return self._parser.options(self._name)\n         else:\n             return self._parser.defaults()\n+    # end def\n \n     @property\n     def parser(self):\n@@ -1272,6 +1419,8 @@\n             _impl = self._parser.get\n         return _impl(self._name, option, raw=raw, vars=vars,\n                      fallback=fallback, **kwargs)\n+    # end def\n+# end class\n \n \n class ConverterMapping(MutableMapping):\n@@ -1291,7 +1440,10 @@\n             m = self.GETTERCRE.match(getter)\n             if not m or not callable(getattr(self._parser, getter)):\n                 continue\n+            # end if\n             self._data[m.group('name')] = None   # See class docstring.\n+        # end for\n+    # end def\n \n     def __getitem__(self, key):\n         return self._data[key]\n@@ -1302,6 +1454,7 @@\n         except TypeError:\n             raise ValueError('Incompatible key: {} (type: {})'\n                              ''.format(key, type(key)))\n+        # end try\n         if k == 'get':\n             raise ValueError('Incompatible key: cannot use \"\" as a name')\n         self._data[key] = value\n@@ -1311,6 +1464,7 @@\n         for proxy in self._parser.values():\n             getter = functools.partial(proxy.get, _impl=func)\n             setattr(proxy, k, getter)\n+    # end def\n \n     def __delitem__(self, key):\n         try:\n@@ -1325,9 +1479,13 @@\n                 # don't raise since the entry was present in _data, silently\n                 # clean up\n                 continue\n+            # end try\n+        # end for\n+    # end def\n \n     def __iter__(self):\n         return iter(self._data)\n \n     def __len__(self):\n         return len(self._data)\n+# end class\n/tmp/e1-fmt-08kyr6iy/file.py: fmt: inserted 158 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 19,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 7,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_contextlib_py",
+        "lines": 800,
+        "fmt_ok": true,
+        "fmt_output": "            return\n+                # end if\n                 if exc_context is frame_exc:\n                     break\n+                # end if\n                 new_exc = exc_context\n+            # end while\n             # Change the end of the chain to point to the exception\n             # we expect it to reference\n             new_exc.__context__ = old_exc\n+        # end def\n \n         # Callbacks are invoked in LIFO order to match the behaviour of\n         # nested context managers\n@@ -735,17 +810,21 @@\n                     cb_suppress = cb(*exc_details)\n                 else:\n                     cb_suppress = await cb(*exc_details)\n+                # end if\n \n                 if cb_suppress:\n                     suppressed_exc = True\n                     pending_raise = False\n                     exc_details = (None, None, None)\n+                # end if\n             except:\n                 new_exc_details = sys.exc_info()\n                 # simulate the stack of exceptions by setting the context\n                 _fix_exception_context(new_exc_details[1], exc_details[1])\n                 pending_raise = True\n                 exc_details = new_exc_details\n+            # end try\n+        # end while\n         if pending_raise:\n             try:\n                 # bare \"raise exc_details[1]\" replaces our carefully\n@@ -755,7 +834,11 @@\n             except BaseException:\n                 exc_details[1].__context__ = fixed_ctx\n                 raise\n+            # end try\n+        # end if\n         return received_exc and suppressed_exc\n+    # end def\n+# end class\n \n \n class nullcontext(AbstractContextManager, AbstractAsyncContextManager):\n@@ -783,6 +866,7 @@\n \n     async def __aexit__(self, *excinfo):\n         pass\n+# end class\n \n \n class chdir(AbstractContextManager):\n@@ -798,3 +882,4 @@\n \n     def __exit__(self, *excinfo):\n         os.chdir(self._old_cwd.pop())\n+# end class\n/tmp/e1-fmt-xoezq4nz/file.py: fmt: inserted 85 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 19,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": true,
+        "fmt_strict_errors": 0,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_csv_py",
+        "lines": 451,
+        "fmt_ok": true,
+        "fmt_output": "ing else indicates a preference, pick the character that\n         # dominates(?)\n@@ -385,6 +429,7 @@\n         skipinitialspace = (data[0].count(delim) ==\n                             data[0].count(\"%c \" % delim))\n         return (delim, skipinitialspace)\n+    # end def\n \n \n     def has_header(self, sample):\n@@ -410,10 +455,12 @@\n             # arbitrary number of rows to check, to keep it sane\n             if checked > 20:\n                 break\n+            # end if\n             checked += 1\n \n             if len(row) != columns:\n                 continue # skip rows that have irregular number of columns\n+            # end if\n \n             for col in list(columnTypes.keys()):\n                 thisType = complex\n@@ -422,6 +469,7 @@\n                 except (ValueError, OverflowError):\n                     # fallback to length of string\n                     thisType = len(row[col])\n+                # end try\n \n                 if thisType != columnTypes[col]:\n                     if columnTypes[col] is None: # add new column type\n@@ -430,6 +478,10 @@\n                         # type is inconsistent, remove column from\n                         # consideration\n                         del columnTypes[col]\n+                    # end if\n+                # end if\n+            # end for\n+        # end for\n \n         # finally, compare results against first row and \"vote\"\n         # on whether it's a header\n@@ -440,6 +492,7 @@\n                     hasHeader += 1\n                 else:\n                     hasHeader -= 1\n+                # end if\n             else: # attempt typecast\n                 try:\n                     colType(header[col])\n@@ -447,5 +500,10 @@\n                     hasHeader += 1\n                 else:\n                     hasHeader -= 1\n+                # end try\n+            # end if\n+        # end for\n \n         return hasHeader > 0\n+    # end def\n+# end class\n/tmp/e1-fmt-b_huihof/file.py: fmt: inserted 58 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 6,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 1,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_dataclasses_py",
+        "lines": 1581,
+        "fmt_ok": true,
+        "fmt_output": "c\n         else:\n             raise TypeError(f'Invalid field: {item!r}')\n+        # end if\n \n         if not isinstance(name, str) or not name.isidentifier():\n             raise TypeError(f'Field names must be valid identifiers: {name!r}')\n@@ -1499,6 +1593,7 @@\n \n         seen.add(name)\n         annotations[name] = tp\n+    # end for\n \n     # Update 'ns' with the user-supplied namespace plus our calculated values.\n     def exec_body_callback(ns):\n@@ -1520,6 +1615,9 @@\n                 module = sys._getframe(1).f_globals.get('__name__', '__main__')\n             except (AttributeError, ValueError):\n                 pass\n+            # end try\n+        # end try\n+    # end if\n     if module is not None:\n         cls.__module__ = module\n \n@@ -1528,6 +1626,7 @@\n                      unsafe_hash=unsafe_hash, frozen=frozen,\n                      match_args=match_args, kw_only=kw_only, slots=slots,\n                      weakref_slot=weakref_slot)\n+# end def\n \n \n def replace(obj, /, **changes):\n@@ -1565,13 +1664,18 @@\n                 raise ValueError(f'field {f.name} is declared with '\n                                  'init=False, it cannot be specified with '\n                                  'replace()')\n+            # end if\n             continue\n+        # end if\n \n         if f.name not in changes:\n             if f._field_type is _FIELD_INITVAR and f.default is MISSING:\n                 raise ValueError(f\"InitVar {f.name!r} \"\n                                  'must be specified with replace()')\n+            # end if\n             changes[f.name] = getattr(obj, f.name)\n+        # end if\n+    # end for\n \n     # Create the new object, which calls __init__() and\n     # __post_init__() (if defined), using all of the init fields we've\n@@ -1579,3 +1683,4 @@\n     # changes that aren't fields, this will correctly raise a\n     # TypeError.\n     return obj.__class__(**changes)\n+# end def\n/tmp/e1-fmt-_kr6ir4h/file.py: fmt: inserted 105 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 35,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 14,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_functools_py",
+        "lines": 1006,
+        "fmt_ok": true,
+        "fmt_output": "-916,6 +1005,7 @@\n     wrapper._clear_cache = dispatch_cache.clear\n     update_wrapper(wrapper, func)\n     return wrapper\n+# end def\n \n \n # Descriptor version\n@@ -932,6 +1022,7 @@\n \n         self.dispatcher = singledispatch(func)\n         self.func = func\n+    # end def\n \n     def register(self, cls, method=None):\n         \"\"\"generic_method.register(cls, func) -> func\n@@ -939,6 +1030,7 @@\n         Registers a new implementation for the given *cls* on a *generic_method*.\n         \"\"\"\n         return self.dispatcher.register(cls, func=method)\n+    # end def\n \n     def __get__(self, obj, cls=None):\n         def _method(*args, **kwargs):\n@@ -949,10 +1041,12 @@\n         _method.register = self.register\n         update_wrapper(_method, self.func)\n         return _method\n+    # end def\n \n     @property\n     def __isabstractmethod__(self):\n         return getattr(self.func, '__isabstractmethod__', False)\n+# end class\n \n \n ################################################################################\n@@ -975,6 +1069,8 @@\n                 \"Cannot assign the same cached_property to two different names \"\n                 f\"({self.attrname!r} and {name!r}).\"\n             )\n+        # end if\n+    # end def\n \n     def __get__(self, instance, owner=None):\n         if instance is None:\n@@ -990,6 +1086,7 @@\n                 f\"instance to cache {self.attrname!r} property.\"\n             )\n             raise TypeError(msg) from None\n+        # end try\n         val = cache.get(self.attrname, _NOT_FOUND)\n         if val is _NOT_FOUND:\n             val = self.func(instance)\n@@ -1001,6 +1098,10 @@\n                     f\"does not support item assignment for caching {self.attrname!r} property.\"\n                 )\n                 raise TypeError(msg) from None\n+            # end try\n+        # end if\n         return val\n+    # end def\n \n     __class_getitem__ = classmethod(GenericAlias)\n+# end class\n/tmp/e1-fmt-rtc3q0go/file.py: fmt: inserted 101 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 30,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 7,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_json_encoder_py",
+        "lines": 443,
+        "fmt_ok": true,
+        "fmt_output": "\n+        # end if\n         yield '{'\n         if _indent is not None:\n             _current_indent_level += 1\n@@ -349,6 +375,7 @@\n         else:\n             newline_indent = None\n             item_separator = _item_separator\n+        # end if\n         first = True\n         if _sort_keys:\n             items = sorted(dct.items())\n@@ -376,10 +403,12 @@\n             else:\n                 raise TypeError(f'keys must be str, int, float, bool or None, '\n                                 f'not {key.__class__.__name__}')\n+            # end if\n             if first:\n                 first = False\n             else:\n                 yield item_separator\n+            # end if\n             yield _encoder(key)\n             yield _key_separator\n             if isinstance(value, str):\n@@ -403,13 +432,17 @@\n                     chunks = _iterencode_dict(value, _current_indent_level)\n                 else:\n                     chunks = _iterencode(value, _current_indent_level)\n+                # end if\n                 yield from chunks\n+            # end if\n+        # end for\n         if newline_indent is not None:\n             _current_indent_level -= 1\n             yield '\\n' + _indent * _current_indent_level\n         yield '}'\n         if markers is not None:\n             del markers[markerid]\n+    # end def\n \n     def _iterencode(o, _current_indent_level):\n         if isinstance(o, str):\n@@ -435,9 +468,15 @@\n                 markerid = id(o)\n                 if markerid in markers:\n                     raise ValueError(\"Circular reference detected\")\n+                # end if\n                 markers[markerid] = o\n+            # end if\n             o = _default(o)\n             yield from _iterencode(o, _current_indent_level)\n             if markers is not None:\n                 del markers[markerid]\n+            # end if\n+        # end if\n+    # end def\n     return _iterencode\n+# end def\n/tmp/e1-fmt-gebzxu7u/file.py: fmt: inserted 39 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 4,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 28,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_pathlib_py",
+        "lines": 1437,
+        "fmt_ok": true,
+        "fmt_output": "     def rename(self, target):\n         \"\"\"\n@@ -1364,6 +1543,7 @@\n         \"\"\"\n         os.rename(self, target)\n         return self.with_segments(target)\n+    # end def\n \n     def replace(self, target):\n         \"\"\"\n@@ -1377,6 +1557,7 @@\n         \"\"\"\n         os.replace(self, target)\n         return self.with_segments(target)\n+    # end def\n \n     def symlink_to(self, target, target_is_directory=False):\n         \"\"\"\n@@ -1386,6 +1567,7 @@\n         if not hasattr(os, \"symlink\"):\n             raise NotImplementedError(\"os.symlink() not available on this system\")\n         os.symlink(target, self, target_is_directory)\n+    # end def\n \n     def hardlink_to(self, target):\n         \"\"\"\n@@ -1396,6 +1578,7 @@\n         if not hasattr(os, \"link\"):\n             raise NotImplementedError(\"os.link() not available on this system\")\n         os.link(target, self)\n+    # end def\n \n     def expanduser(self):\n         \"\"\" Return a new path with expanded ~ and ~user constructs\n@@ -1406,10 +1589,14 @@\n             homedir = self._flavour.expanduser(self._tail[0])\n             if homedir[:1] == \"~\":\n                 raise RuntimeError(\"Could not determine home directory.\")\n+            # end if\n             drv, root, tail = self._parse_path(homedir)\n             return self._from_parsed_parts(drv, root, tail + self._tail[1:])\n+        # end if\n \n         return self\n+    # end def\n+# end class\n \n \n class PosixPath(Path, PurePosixPath):\n@@ -1423,6 +1610,7 @@\n         def __new__(cls, *args, **kwargs):\n             raise NotImplementedError(\n                 f\"cannot instantiate {cls.__name__!r} on your system\")\n+# end class\n \n class WindowsPath(Path, PureWindowsPath):\n     \"\"\"Path subclass for Windows systems.\n@@ -1435,3 +1623,4 @@\n         def __new__(cls, *args, **kwargs):\n             raise NotImplementedError(\n                 f\"cannot instantiate {cls.__name__!r} on your system\")\n+# end class\n/tmp/e1-fmt-lfjrlari/file.py: fmt: inserted 189 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 14,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 12,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_shutil_py",
+        "lines": 1605,
+        "fmt_ok": true,
+        "fmt_output": "ack[0]\n         if lines <= 0:\n             lines = size.lines or fallback[1]\n+    # end if\n \n     return os.terminal_size((columns, lines))\n+# end def\n \n \n # Check that a given file can be accessed with the correct mode.\n@@ -1520,6 +1710,7 @@\n     \"\"\"\n     return (not (mode & os.X_OK)) or _winapi.NeedCurrentDirectoryForExePath(\n                 os.fsdecode(cmd))\n+# end def\n \n \n def which(cmd, mode=os.F_OK | os.X_OK, path=None):\n@@ -1549,8 +1740,11 @@\n                 except (AttributeError, ValueError):\n                     # os.confstr() or CS_PATH is not available\n                     path = os.defpath\n+                # end try\n+            # end if\n             # bpo-35755: Don't use os.defpath if the PATH environment variable\n             # is set to an empty string\n+        # end if\n \n         # PATH='' doesn't match, whereas PATH=':' looks in the current\n         # directory\n@@ -1563,12 +1757,16 @@\n         else:\n             path = os.fsdecode(path)\n             path = path.split(os.pathsep)\n+        # end if\n \n         if sys.platform == \"win32\" and _win_path_needs_curdir(cmd, mode):\n             curdir = os.curdir\n             if use_bytes:\n                 curdir = os.fsencode(curdir)\n+            # end if\n             path.insert(0, curdir)\n+        # end if\n+    # end if\n \n     if sys.platform == \"win32\":\n         # PATHEXT is necessary to check on Windows.\n@@ -1592,6 +1790,7 @@\n         # On other platforms you don't have things like PATHEXT to tell you\n         # what file suffixes are executable, so just pass on cmd as-is.\n         files = [cmd]\n+    # end if\n \n     seen = set()\n     for dir in path:\n@@ -1602,4 +1801,9 @@\n                 name = os.path.join(dir, thefile)\n                 if _access_check(name, mode):\n                     return name\n+                # end if\n+            # end for\n+        # end if\n+    # end for\n     return None\n+# end def\n/tmp/e1-fmt-kcned505/file.py: fmt: inserted 204 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 44,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 16,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_tempfile_py",
+        "lines": 1091,
+        "fmt_ok": true,
+        "fmt_output": "\n \n \n class TemporaryDirectory:\n@@ -1025,6 +1144,7 @@\n             self, self._cleanup, self.name,\n             warn_message=\"Implicitly cleaning up {!r}\".format(self),\n             ignore_errors=self._ignore_cleanup_errors, delete=self._delete)\n+    # end def\n \n     @classmethod\n     def _rmtree(cls, name, ignore_errors=False, repeated=False):\n@@ -1033,11 +1153,14 @@\n                 if repeated and path == name:\n                     if ignore_errors:\n                         return\n+                    # end if\n                     raise\n+                # end if\n \n                 try:\n                     if path != name:\n                         _resetperms(_os.path.dirname(path))\n+                    # end if\n                     _resetperms(path)\n \n                     try:\n@@ -1055,18 +1178,26 @@\n                         if not _os.path.isdir(path) or _os.path.isjunction(path):\n                             if ignore_errors:\n                                 return\n+                            # end if\n                             raise\n+                        # end if\n                         cls._rmtree(path, ignore_errors=ignore_errors,\n                                     repeated=(path == name))\n+                    # end try\n                 except FileNotFoundError:\n                     pass\n+                # end try\n             elif isinstance(exc, FileNotFoundError):\n                 pass\n             else:\n                 if not ignore_errors:\n                     raise\n+                # end if\n+            # end if\n+        # end def\n \n         _rmtree(name, onexc=onexc)\n+    # end def\n \n     @classmethod\n     def _cleanup(cls, name, warn_message, ignore_errors=False, delete=True):\n@@ -1089,3 +1220,4 @@\n             self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)\n \n     __class_getitem__ = classmethod(_types.GenericAlias)\n+# end class\n/tmp/e1-fmt-ge34ysxk/file.py: fmt: inserted 132 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 21,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 2,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_textwrap_py",
+        "lines": 491,
+        "fmt_ok": true,
+        "fmt_output": "+        # end while\n \n         return lines\n+    # end def\n \n     def _split_chunks(self, text):\n         text = self._munge_whitespace(text)\n@@ -357,6 +384,7 @@\n         if self.fix_sentence_endings:\n             self._fix_sentence_endings(chunks)\n         return self._wrap_chunks(chunks)\n+    # end def\n \n     def fill(self, text):\n         \"\"\"fill(text : string) -> string\n@@ -366,6 +394,8 @@\n         containing the entire wrapped paragraph.\n         \"\"\"\n         return \"\\n\".join(self.wrap(text))\n+    # end def\n+# end class\n \n \n # -- Convenience interface ---------------------------------------------\n@@ -382,6 +412,7 @@\n     \"\"\"\n     w = TextWrapper(width=width, **kwargs)\n     return w.wrap(text)\n+# end def\n \n def fill(text, width=70, **kwargs):\n     \"\"\"Fill a single paragraph of text, returning a new string.\n@@ -394,6 +425,7 @@\n     \"\"\"\n     w = TextWrapper(width=width, **kwargs)\n     return w.fill(text)\n+# end def\n \n def shorten(text, width, **kwargs):\n     \"\"\"Collapse and truncate the given text to fit in the given width.\n@@ -409,6 +441,7 @@\n     \"\"\"\n     w = TextWrapper(width=width, max_lines=1, **kwargs)\n     return w.fill(' '.join(text.strip().split()))\n+# end def\n \n \n # -- Loosely related functionality -------------------------------------\n@@ -455,6 +488,10 @@\n                 if x != y:\n                     margin = margin[:i]\n                     break\n+                # end if\n+            # end for\n+        # end if\n+    # end for\n \n     # sanity check (testing/debugging only)\n     if 0 and margin:\n@@ -465,6 +502,7 @@\n     if margin:\n         text = re.sub(r'(?m)^' + margin, '', text)\n     return text\n+# end def\n \n \n def indent(text, prefix, predicate=None):\n@@ -483,6 +521,7 @@\n         for line in text.splitlines(True):\n             yield (prefix + line if predicate(line) else line)\n     return ''.join(prefixed_lines())\n+# end def\n \n \n if __name__ == \"__main__\":\n/tmp/e1-fmt-y4xub3tf/file.py: fmt: inserted 39 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 6,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 3,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      },
+      {
+        "file": "stdlib_unittest_case_py",
+        "lines": 1456,
+        "fmt_ok": true,
+        "fmt_output": " the test if the text matches the regular expression.\"\"\"\n@@ -1359,6 +1530,9 @@\n             # _formatMessage ensures the longMessage option is respected\n             msg = self._formatMessage(msg, standardMsg)\n             raise self.failureException(msg)\n+        # end if\n+    # end def\n+# end class\n \n \n \n@@ -1377,6 +1551,7 @@\n         self._tearDownFunc = tearDown\n         self._testFunc = testFunc\n         self._description = description\n+    # end def\n \n     def setUp(self):\n         if self._setUpFunc is not None:\n@@ -1400,6 +1575,7 @@\n                self._tearDownFunc == other._tearDownFunc and \\\n                self._testFunc == other._testFunc and \\\n                self._description == other._description\n+    # end def\n \n     def __hash__(self):\n         return hash((type(self), self._setUpFunc, self._tearDownFunc,\n@@ -1418,6 +1594,8 @@\n             return self._description\n         doc = self._testFunc.__doc__\n         return doc and doc.split(\"\\n\")[0].strip() or None\n+    # end def\n+# end class\n \n \n class _SubTest(TestCase):\n@@ -1428,6 +1606,7 @@\n         self.test_case = test_case\n         self.params = params\n         self.failureException = test_case.failureException\n+    # end def\n \n     def runTest(self):\n         raise NotImplementedError(\"subtests cannot be run directly\")\n@@ -1441,7 +1620,9 @@\n                 \"{}={!r}\".format(k, v)\n                 for (k, v) in self.params.items())\n             parts.append(\"({})\".format(params_desc))\n+        # end if\n         return \" \".join(parts) or '(<subtest>)'\n+    # end def\n \n     def id(self):\n         return \"{} {}\".format(self.test_case.id(), self._subDescription())\n@@ -1451,6 +1632,8 @@\n         description has been provided.\n         \"\"\"\n         return self.test_case.shortDescription()\n+    # end def\n \n     def __str__(self):\n         return \"{} {}\".format(self.test_case, self._subDescription())\n+# end class\n/tmp/e1-fmt-vvv4346m/file.py: fmt: inserted 183 anchor(s)\nfmt: 1 file(s) changed, 1 checked\n",
+        "fmt_anchors": 17,
+        "fmt_check_ok": true,
+        "fmt_check_errors": 0,
+        "fmt_check_ok_given_ok": true,
+        "fmt_strict_ok": false,
+        "fmt_strict_errors": 4,
+        "fmt_idempotent": true,
+        "black_ok": null,
+        "black_error": "",
+        "check_after_black_ok": null,
+        "black_anchors": null
+      }
+    ],
+    "fmt_ok": 20,
+    "fmt_check_ok": 20,
+    "fmt_strict_ok": 6,
+    "fmt_idempotent": 20,
+    "fmt_check_ok_given_ok": 20,
+    "fmt_strict_ok_given_ok": 6,
+    "fmt_failures": [],
+    "black_ok": 0,
+    "check_after_black_ok": 0
+  },
+  "black_cases": [],
+  "injection_failures": [
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_py:10:if:465-469:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:10:if:465-469:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_py:8:def:444-450:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:8:def:444-450:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:13:with:475-492:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_py:16:def:496-529:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:16:def:496-529:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_py:11:def:472-493:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:11:def:472-493:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:12:for:474-492:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:9:def:453-469:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:14:for:480-492:12",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:1:def:398-407:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:0:for:129-136:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:3:def:410-415:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:6:def:429-434:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "dedent_last",
+      "target": "repo_bench_calibrate_generate_py:5:def:422-426:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:5:def:422-426:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:10:if:465-469:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:0:for:129-136:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:1:def:398-407:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:11:def:472-493:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_py:16:def:496-529:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_t_py:5:def:315-318:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:5:def:315-318:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_t_py:13:if:363-368:16",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:13:if:363-368:16",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_t_py:16:for:384-389:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_t_py:7:def:325-331:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:7:def:325-331:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_calibrate_generate_t_py:8:def:334-345:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:8:def:334-345:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:12:for:356-368:12",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:11:with:351-368:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:10:for:350-368:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:9:def:348-369:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:14:def:372-393:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "dedent_last",
+      "target": "repo_bench_calibrate_generate_t_py:5:def:315-318:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:5:def:315-318:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "dedent_last",
+      "target": "repo_bench_calibrate_generate_t_py:7:def:325-331:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:7:def:325-331:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:8:def:334-345:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "dedent_last",
+      "target": "repo_bench_calibrate_generate_t_py:9:def:348-369:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:9:def:348-369:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "dedent_last",
+      "target": "repo_bench_calibrate_generate_t_py:14:def:372-393:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_calibrate_generate_t_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_calibrate_generate_t_py:14:def:372-393:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:30:if:296-300:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:54:def:534-543:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:54:def:534-543:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:43:def:359-395:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:43:def:359-395:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:48:def:406-531:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:48:def:406-531:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:25:def:224-323:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:25:def:224-323:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:12:def:156-206:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:12:def:156-206:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:14:for:162-205:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:10:def:113-153:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:10:def:113-153:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:17:for:168-205:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:19:for:171-205:12",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:44:for:361-394:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:44:for:361-394:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "outer_before_inner",
+      "target": "repo_bench_harness_py:26:if:258-289:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "consistent_shift",
+      "target": "repo_bench_harness_py:26:if:258-289:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "dedent_last",
+      "target": "repo_bench_harness_py:38:def:344-348:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "dedent_last",
+      "target": "repo_bench_harness_py:40:def:351-356:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_bench_harness_py",
+      "drift": "dedent_last",
+      "target": "repo_bench_harness_py:46:def:398-403:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:44:try:248-253:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:44:try:248-253:4",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:18:class:119-129:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:43:def:239-254:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:43:def:239-254:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:12:class:82-105:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:30:def:186-209:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:30:def:186-209:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:2:def:58-78:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:2:def:58-78:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:19:def:132-151:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:19:def:132-151:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:25:def:169-183:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:25:def:169-183:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:31:try:195-208:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:31:try:195-208:4",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:21:def:154-166:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:21:def:154-166:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_anchors_py:26:try:172-182:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:26:try:172-182:4",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:32:for:196-206:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_anchors_py:14:def:96-101:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:14:def:96-101:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_anchors_py:39:def:221-226:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:39:def:221-226:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_anchors_py:37:def:212-218:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:37:def:212-218:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_anchors_py:49:def:267-273:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_anchors_py:49:def:267-273:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_anchors_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_anchors_py:47:def:257-264:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_checker_py:40:while:373-381:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:40:while:373-381:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_checker_py:27:def:286-298:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:27:def:286-298:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_checker_py:31:def:301-327:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:31:def:301-327:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_checker_py:10:def:128-283:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:10:def:128-283:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_checker_py:11:for:133-257:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_checker_py:7:def:93-125:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:7:def:93-125:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_checker_py:35:def:330-362:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:35:def:330-362:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_checker_py:18:if:199-227:8",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:22:for:262-281:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:0:class:38-56:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:23:for:263-281:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_checker_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_checker_py:39:def:365-382:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_cli_py:8:def:68-74:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:8:def:68-74:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:47:if:293-305:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_cli_py:34:try:212-233:8",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:34:try:212-233:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_cli_py:26:def:139-203:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:26:def:139-203:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_cli_py:53:def:352-415:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:53:def:352-415:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_cli_py:32:def:206-251:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:32:def:206-251:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:27:for:144-187:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_cli_py:40:def:254-288:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:40:def:254-288:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_cli_py:45:def:291-321:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:45:def:291-321:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:33:for:211-240:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:28:try:145-168:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:0:def:47-65:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_cli_py:54:def:418-421:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:54:def:418-421:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_cli_py:8:def:68-74:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:8:def:68-74:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:52:def:342-349:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_cli_py:50:def:324-339:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:50:def:324-339:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_cli_py:45:def:291-321:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:45:def:291-321:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_cli_py:40:def:254-288:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:40:def:254-288:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_cli_py:32:def:206-251:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:32:def:206-251:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_cli_py:53:def:352-415:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:53:def:352-415:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_cli_py:26:def:139-203:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_cli_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_cli_py:26:def:139-203:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:90:if:470-473:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:80:def:422-428:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:80:def:422-428:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:5:def:77-92:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:83:def:431-508:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:83:def:431-508:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:4:class:74-131:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:67:def:355-406:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:67:def:355-406:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:61:def:306-352:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:61:def:306-352:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:85:if:450-480:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:85:if:450-480:4",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:98:def:511-537:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:98:def:511-537:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:14:def:111-131:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:14:def:111-131:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "outer_before_inner",
+      "target": "repo_pyforai_editor_py:27:def:184-203:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:2:class:54-71:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_editor_py:55:def:284-287:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:55:def:284-287:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "dedent_last",
+      "target": "repo_pyforai_editor_py:8:def:94-98:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_pyforai_editor_py",
+      "drift": "consistent_shift",
+      "target": "repo_pyforai_editor_py:8:def:94-98:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "repo_tests_test_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_tests_test_checker_py:12:def:94-101:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_tests_test_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_tests_test_checker_py:22:def:153-162:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "repo_tests_test_checker_py",
+      "drift": "outer_before_inner",
+      "target": "repo_tests_test_checker_py:9:def:73-86:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:92:if:560-564:12",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_argparse_py:380:with:2223-2231:20",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:186:class:1091-1115:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:306:class:1754-2677:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:15:class:166-689:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:235:class:1374-1681:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:336:def:1952-2209:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:61:def:407-520:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:201:class:1188-1286:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:43:def:310-405:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:152:class:806-898:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_argparse_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_argparse_py:45:if:315-402:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_configparser_py:45:if:408-412:16",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:45:if:408-412:16",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_configparser_py:60:if:470-477:20",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:60:if:470-477:20",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:136:def:883-901:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:72:class:541-1172:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:161:def:974-1096:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:162:try:998-1093:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:163:for:999-1091:12",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:46:class:420-491:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:32:class:348-417:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:212:class:1207-1274:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:230:class:1277-1333:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:174:if:1037-1091:16",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "dedent_last",
+      "target": "stdlib_configparser_py:33:def:365-368:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:33:def:365-368:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "dedent_last",
+      "target": "stdlib_configparser_py:47:def:426-429:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:47:def:426-429:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "dedent_last",
+      "target": "stdlib_configparser_py:82:def:630-633:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_configparser_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_configparser_py:82:def:630-633:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_contextlib_py:104:def:640-643:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:104:def:640-643:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:123:if:749-757:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:125:class:761-785:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:102:class:622-758:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:76:class:468-549:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:24:class:125-196:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:37:class:198-269:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:89:class:553-618:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:27:def:141-196:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:40:def:214-269:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:28:if:142-196:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:41:if:215-269:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_contextlib_py:3:def:33-36:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:3:def:33-36:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_contextlib_py:16:def:88-91:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:16:def:88-91:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_contextlib_py:64:def:398-401:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:64:def:398-401:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_contextlib_py:78:def:476-479:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_contextlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_contextlib_py:78:def:476-479:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_csv_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_csv_py:19:if:127-131:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_csv_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_csv_py:5:class:57-64:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_csv_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_csv_py:69:for:409-432:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_csv_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_csv_py:32:class:172-451:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_csv_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_csv_py:51:def:287-387:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_csv_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_csv_py:38:def:211-284:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_csv_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_csv_py:67:def:390-451:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:170:if:1487-1491:8",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:170:if:1487-1491:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:92:for:950-959:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:142:def:1301-1322:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:142:def:1301-1322:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:90:def:921-1152:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:90:def:921-1152:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:70:def:760-855:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:70:def:760-855:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:165:def:1443-1530:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:165:def:1443-1530:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:17:class:295-356:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:35:def:489-546:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:35:def:489-546:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:47:def:568-624:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:47:def:568-624:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_dataclasses_py:65:def:701-757:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:65:def:701-757:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:144:def:1325-1379:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_dataclasses_py:145:if:1326-1379:4",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_dataclasses_py",
+      "drift": "dedent_last",
+      "target": "stdlib_dataclasses_py:141:def:1294-1298:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_functools_py:145:if:826-830:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_functools_py:72:if:398-405:12",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_functools_py:138:def:774-798:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_functools_py:138:def:774-798:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_functools_py:143:def:800-918:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_functools_py:143:def:800-918:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_functools_py:93:def:525-639:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_functools_py:93:def:525-639:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_functools_py:94:if:540-621:4",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_functools_py:96:if:549-621:4",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_functools_py:47:class:276-339:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_functools_py",
+      "drift": "dedent_last",
+      "target": "stdlib_functools_py:76:def:421-424:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_json_encoder_py:70:if:402-405:16",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:70:if:402-405:16",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:8:try:55-67:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:39:if:304-326:12",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:10:class:74-258:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:29:def:260-443:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:48:def:334-412:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:11:def:105-159:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:31:def:278-332:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:20:def:205-258:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:54:for:357-406:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:36:for:297-326:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_json_encoder_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_json_encoder_py:73:def:414-442:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:43:def:233-237:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:16:def:154-161:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:232:with:1137-1150:12",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:170:class:826-1412:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:59:class:291-794:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:227:def:1114-1157:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:10:def:112-147:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:26:class:190-219:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:51:class:262-288:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:137:def:663-688:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:249:def:1230-1255:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_pathlib_py:87:def:456-459:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:87:def:456-459:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_pathlib_py:101:def:519-522:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:101:def:519-522:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_pathlib_py:105:def:531-534:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:105:def:531-534:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_pathlib_py:107:def:536-539:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:107:def:536-539:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_pathlib_py:109:def:541-544:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:109:def:541-544:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_pathlib_py:111:def:546-549:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:111:def:546-549:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_pathlib_py:119:def:578-581:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:119:def:578-581:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "dedent_last",
+      "target": "stdlib_pathlib_py:239:def:1166-1169:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_pathlib_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_pathlib_py:239:def:1166-1169:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:37:if:208-212:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_shutil_py:170:try:812-819:8",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:170:try:812-819:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:141:if:685-706:20",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:148:def:724-820:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:310:def:1525-1605:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:72:def:347-419:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:196:def:960-1028:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:100:def:491-555:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:173:def:844-908:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:17:def:112-174:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:43:def:230-292:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:131:def:655-717:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "dedent_last",
+      "target": "stdlib_shutil_py:185:def:919-922:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:185:def:919-922:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_shutil_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_shutil_py:258:if:1230-1233:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_tempfile_py:28:try:155-159:8",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:28:try:155-159:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:181:def:972-978:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_tempfile_py:195:try:1038-1062:16",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:195:try:1038-1062:16",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:144:class:824-996:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:0:try:43-181:0",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:136:if:738-822:0",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:137:def:749-822:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:118:class:614-674:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:129:def:676-736:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:21:def:132-181:2",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:10:def:83-125:2",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "dedent_last",
+      "target": "stdlib_tempfile_py:125:def:655-658:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:125:def:655-658:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "dedent_last",
+      "target": "stdlib_tempfile_py:153:def:877-880:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_tempfile_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_tempfile_py:153:def:877-880:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_textwrap_py:56:if:488-491:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:56:if:488-491:0",
+      "error": "consistent shift broke syntax: expected an indented block after 'if' statement on line 488 (<unknown>, line 492)"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_textwrap_py:2:def:143-154:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:2:def:143-154:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_textwrap_py:1:def:112-137:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:0:class:17-368:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_textwrap_py:16:def:238-339:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:16:def:238-339:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:21:while:266-337:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_textwrap_py:41:def:419-467:0",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:41:def:419-467:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:10:def:197-230:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:28:if:310-337:12",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:29:if:311-337:16",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:5:def:157-177:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_textwrap_py:42:for:437-457:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "dedent_last",
+      "target": "stdlib_textwrap_py:37:def:361-368:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "dedent_last",
+      "target": "stdlib_textwrap_py:39:def:386-396:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "dedent_last",
+      "target": "stdlib_textwrap_py:2:def:143-154:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "dedent_last",
+      "target": "stdlib_textwrap_py:38:def:373-384:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "dedent_last",
+      "target": "stdlib_textwrap_py:35:def:347-359:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "dedent_last",
+      "target": "stdlib_textwrap_py:40:def:398-411:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "dedent_last",
+      "target": "stdlib_textwrap_py:51:def:470-485:0",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_textwrap_py",
+      "drift": "dedent_last",
+      "target": "stdlib_textwrap_py:5:def:157-177:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_unittest_case_py:54:if:259-263:12",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:54:if:259-263:12",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:72:def:336-342:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_unittest_case_py:248:def:1318-1335:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:248:def:1318-1335:4",
+      "error": "drift produced a syntax error"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:76:class:345-1361:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "outer_before_inner",
+      "target": "stdlib_unittest_case_py:180:def:976-1073:4",
+      "error": "no nested last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:119:def:599-662:4",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:255:class:1365-1420:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:122:try:610-662:8",
+      "error": "block has clauses; consistent shift is ambiguous"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:187:if:1015-1065:8",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "consistent_shift",
+      "target": "stdlib_unittest_case_py:58:class:283-332:0",
+      "error": "no simple last statement"
+    },
+    {
+      "file": "stdlib_unittest_case_py",
+      "drift": "dedent_last",
+      "target": "stdlib_unittest_case_py:34:def:188-191:0",
+      "error": "drift produced a syntax error"
+    }
+  ]
+}
