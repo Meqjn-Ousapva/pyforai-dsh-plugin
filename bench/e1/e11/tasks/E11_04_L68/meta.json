@@ -1,0 +1,17 @@
+{
+  "slug": "E11_04_L68",
+  "target": {
+    "kind": "if",
+    "lineno": 68,
+    "end_lineno": 71,
+    "col": 24
+  },
+  "anchor_line": 72,
+  "drift_line": 72,
+  "expected_codes": [
+    "E004"
+  ],
+  "tests_sha256": "cdd08de01e55bc421afc103cb92956c93bdd7795314f35b6195abd93f20c943e",
+  "start_sha256": "403b56815806acf4da9012e46fe5f51d694bd8e771394a14a7de7553f9c0afc0",
+  "hidden_failure": " 1}\n\n======================================================================\nFAIL: test_mixed (test_hidden.HiddenTests.test_mixed)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/e1-repair-r75jc3nc/test_hidden.py\", line 261, in test_mixed\n    self._check(records, data, True)\n  File \"/tmp/e1-repair-r75jc3nc/test_hidden.py\", line 241, in _check\n    self.assertEqual(actual, expected)\nAssertionError: {'matched': 118, 'missing': ['inactive'], 'errors': [('[4396 chars]': 1} != {'matched': 114, 'missing': ['inactive'], 'errors': [('[4396 chars]': 1}\nDiff is 7003 characters long. Set self.maxDiff to None to see it.\n\n----------------------------------------------------------------------\nRan 4 tests in 0.004s\n\nFAILED (failures=2)\n"
+}

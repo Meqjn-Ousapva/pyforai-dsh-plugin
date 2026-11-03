@@ -1,0 +1,17 @@
+{
+  "slug": "E11_02_L58",
+  "target": {
+    "kind": "if",
+    "lineno": 58,
+    "end_lineno": 61,
+    "col": 24
+  },
+  "anchor_line": 62,
+  "drift_line": 62,
+  "expected_codes": [
+    "E004"
+  ],
+  "tests_sha256": "cdd08de01e55bc421afc103cb92956c93bdd7795314f35b6195abd93f20c943e",
+  "start_sha256": "fd04935f3f94600cb6fbbccd10940c0d5930d9f0b1dc17eefe8d9bc69cc2f47e",
+  "hidden_failure": "=============================================================\nFAIL: test_mixed (test_hidden.HiddenTests.test_mixed)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/e1-repair-2r073ebe/test_hidden.py\", line 261, in test_mixed\n    self._check(records, data, True)\n  File \"/tmp/e1-repair-2r073ebe/test_hidden.py\", line 241, in _check\n    self.assertEqual(actual, expected)\nAssertionError: {'mat[102 chars]ta', 1, 'status'), ('beta', 2, 'status'), ('be[4390 chars]': 1} != {'mat[102 chars]ta', 3, 'amount'), ('beta', 4, 'currency'), ('[4298 chars]': 1}\nDiff is 7094 characters long. Set self.maxDiff to None to see it.\n\n----------------------------------------------------------------------\nRan 4 tests in 0.005s\n\nFAILED (failures=5)\n"
+}
