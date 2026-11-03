@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "pyforai",
-    "description": "Python 结构锚点与重构：校验、格式化、包裹、替换、移动代码块。"
+    "title": "pyforai — DSH Python 插件",
+    "description": "DSH插件：Python 结构锚点与重构（check / fmt / wrap / replace-body / move）。"
   }
 }

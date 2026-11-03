@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "pyforai",
-    "description": "Python structural anchors and refactors: check, format, wrap, replace, and move blocks."
+    "title": "pyforai — DSH Python plugin",
+    "description": "DSH plugin: Python structural anchors and refactors (check, format, wrap, replace, move)."
   }
 }

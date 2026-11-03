@@ -5,12 +5,25 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyforai"
 version = "0.1.0"
-description = "Comment anchors and structural editing for AI-friendly Python"
+description = "DSH plugin for Python: comment anchors, structural editing, and drift checks for AI coding agents."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "python-for-AI" }]
-keywords = ["python", "ai", "ast", "refactoring", "agents", "indentation"]
+keywords = [
+    "python",
+    "ai",
+    "ai-coding",
+    "agent",
+    "dsh",
+    "dsh-plugin",
+    "ast",
+    "refactoring",
+    "structural-editing",
+    "code-anchors",
+    "indentation",
+    "code-review",
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",

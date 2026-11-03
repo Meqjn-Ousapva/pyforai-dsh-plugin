@@ -3,7 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "pyforai tools for DSH: check and structurally edit Python anchors.",
+  "description": "DSH plugin: pyforai check and structural editing for Python (wrap, replace-body, move).",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "python",
+    "ai-coding",
+    "ai-agent",
+    "comment-anchors",
+    "structural-editing",
+    "refactoring",
+    "code-review"
+  ],
   "exports": {
     ".": "./index.js",
     "./locale/*.json": "./locale/*.json",

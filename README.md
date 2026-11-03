@@ -1,6 +1,8 @@
-# python-for-AI
+# pyforai — DSH插件：给 Python 加一层可校验、可寻址的结构
 
-> 用注释锚点给 Python 补一层 AI 可读的**结构表示**：把隐式的块边界变成显式、可校验、可寻址的东西。语言零改动，权威放在工具链。
+> **DSH插件 / DSH plugin for Python**：用注释锚点给 Python 补一层 AI 可读的**结构表示**，把隐式的块边界变成显式、可校验、可寻址的东西。语言零改动，权威放在工具链。
+>
+> **English:** pyforai is a DSH plugin for Python AI coding agents. Comment anchors are validated by `check` and used as block handles by `wrap` / `replace-body` / `move`.
 
 ```python
 for item in items:
@@ -16,6 +18,23 @@ Python 解析器完全忽略 `# end if` / `# end for`。这正是重点：**不�
 
 - **L1 `check`**：把锚点当作“断言”，校验它和缩进是否一致；错误信息直接告诉你期望的 kind / 行号。
 - **L2 `wrap` / `replace-body` / `move`**：把锚点当作“句柄”，结构化编辑，自动处理缩进，模型不再做空白手术。
+
+---
+
+## DSH插件（DSH plugin）
+
+`dsh-plugin/` 是一个 Host-only DSH bundle，把 `pyforai` 暴露成两个 native tools：
+
+- `pyforai_check` — 校验 Python 锚点，只读，支持 `strict` / `minLines` / `minDepth`。
+- `pyforai_edit` — `fmt` / `wrap` / `replace_body` / `move`，自动缩进、原子写。
+
+安装到当前 DSH profile：
+
+```text
+plugin_manager action=install_bundle target=/absolute/path/to/<repo>/dsh-plugin
+```
+
+工具说明、配置、重载和沙箱注意事项见 [`dsh-plugin/README.md`](dsh-plugin/README.md)。
 
 ---
 
@@ -54,7 +73,7 @@ Python 解析器完全忽略 `# end if` / `# end for`。这正是重点：**不�
 只依赖标准库，Python ≥ 3.10。
 
 ```bash
-cd python-for-AI
+cd /path/to/pyforai-dsh-plugin
 python -m pip install -e .
 ```
 
@@ -95,7 +114,7 @@ pyforai --version
 
 ---
 
-## DSH 集成（native plugin）
+## DSH插件安装（native plugin）
 
 `dsh-plugin/` 是一个 Host-only DSH bundle，把 `pyforai` 暴露成两个原生工具：
 
@@ -103,13 +122,13 @@ pyforai --version
 - `pyforai_edit` — `fmt` / `wrap` / `replace_body` / `move`；自动缩进、原子写，支持 `dryRun`。
 
 插件还会注册 `tool:pyforai` 系统提示：生成或编辑 Python 时会自动调用
-`pyforai_edit`（新文件先 `fmt`）和 `pyforai_check`。控制实验的 A/B 臂有显式
-override，C 臂遵循该提示。
+`pyforai_edit`（新文件先 `fmt`）和 `pyforai_check`。评测中的 `no_check` 等臂
+可以显式关闭该提示；默认行为是自动使用。
 
 安装到当前 profile（本机 `web`，位于 `~/.dsh/profiles/web`）：
 
 ```text
-plugin_manager action=install_bundle target=/absolute/path/to/python-for-AI/dsh-plugin
+plugin_manager action=install_bundle target=/absolute/path/to/<repo>/dsh-plugin
 ```
 
 bundle 自带 Linux amd64/arm64 静态二进制；相对路径按调用 agent 的 session
@@ -351,7 +370,7 @@ python -m unittest discover -s tests -v
 ## 目录结构
 
 ```
-python-for-AI/
+pyforai-dsh-plugin/
 ├── pyforai/           # Python 参考实现（规范/测试 oracle）
 │   ├── anchors.py     # 块模型、锚点词法、逻辑行起点
 │   ├── checker.py     # L1：校验、诊断、strict、fmt 计划
@@ -381,42 +400,43 @@ python-for-AI/
 │   ├── demo_move.py   # 用于 move 演示
 │   └── edge.py        # decorators/async/match/try-finally/for-else
 ├── docs/SPEC.md       # 规范：词法、位置、不变式、错误码、编辑语义
-├── bench/             # 三臂实验：任务、arms、harness、pilot 报告
-│   ├── DESIGN.md
+├── bench/             # 评测：E1 校验 / E1.1 修复 / E2 结构化编辑
+│   ├── SUMMARY.md     # 数据支撑的能力总结
 │   ├── README.md
-│   ├── harness.py
-│   ├── tasks/ hidden/ arms/ runs/
-│   └── report.md
+│   ├── e1/            # drift + repair + e11
+│   └── e2/            # forced-reindent wrap
 └── pyproject.toml
 ```
 
 ---
 
-## 评测（三臂实验）
+## 评测（E1 / E1.1 / E2）
 
-`bench/` 里是可复现的三臂实验：**无锚点 / 锚点 / 锚点+结构化编辑 × 从零写 / 结构重构**。
+`bench/` 现在是三个自包含的评测：
 
-```bash
-python bench/harness.py init
-# 用任意 agent runner 跑 bench/runs/<id>/prompt.md
-python bench/harness.py score
-python bench/harness.py report
-```
+- **E1：校验**。向 20 个真实 Python 文件注入 592 个语法合法的结构漂移，比较
+  `py_compile` 与 `pyforai check`。结果：`check` 检出 476/476，干净锚点文件
+  误报 0/165；`py_compile` 全部漏掉。
+- **E1.1：修复**。单函数、无 `audit` 双胞胎、silent drift；比较
+  `no_check` / `tool_check` / `forced_diagnostic`。强模型仍然全部首轮修好。
+- **E2：结构化编辑**。把 20/80/200 条语句的 `for` 循环整体包进 `try/except`，
+  比较 manual 与 `pyforai wrap`。200 条语句时模型侧输出 15,940 B → 251 B
+  （约 63×），但墙钟没有变快。
 
-- 设计、假设、样本量、效度威胁：[`bench/DESIGN.md`](bench/DESIGN.md)
-- 运行方式：[`bench/README.md`](bench/README.md)
-- pilot 原始数字：[`bench/report.md`](bench/report.md)
-- pilot 分析与结论：[`bench/PILOT.md`](bench/PILOT.md)
+完整数据和限制见 [`bench/SUMMARY.md`](bench/SUMMARY.md)、
+[`bench/README.md`](bench/README.md)。
 
-Pilot 只有 1 run/cell，只用于验证流水线和检查天花板/地板效应，不做统计推断。
-本次 pilot（3 任务 × 3 臂 = 9 个 run）的结论是**天花板效应**：全部首轮通过，
-任务太简单，尚不能检验“锚点是否减少语义缩进错误”。成本上 **A < C < B**：
-A 最低；C（结构化编辑）比 B（手写锚点）更省，说明手写锚点的维护成本才是大头；
-但在当前难度下，两者相对 A 都是纯开销。下一步应先做难度校准，而不是扩大样本。
+## 相关关键词
+
+DSH插件、DSH plugin、Python 插件、AI 编程、AI coding agent、LLM、代码锚点、
+comment anchors、结构化编辑、structural editing、代码缩进、refactor、
+code review、AST。
 
 ## 下一步
 
 - **Lens 模式**：盘上保持纯 Python，读时注入锚点/块号，写时剥离或结构化回写。
 - **更多结构化操作**：extract-function、rename、import-aware move。
 - **LSP / MCP**：把 `check`、`wrap`、`replace-body` 暴露给编辑器或 agent runtime。
-- **评测**：同一组任务（从零写 vs 结构重构）对照“无锚点 / 锚点 / 锚点+结构化编辑”，看语法错误率、语义 dedent 错误率、测试通过率、token、修复轮数。结构重构才是主战场；如果这一类没有显著收益，这个方向就该收手。
+- **评测**：补齐真实 token 计数、真实 200 行代码、`move` / `replace-body`，
+  再决定是否投入 E3（真实 PR 重构）。结构重构才是主战场；如果这一类没有
+  显著收益，这个方向就该收手。

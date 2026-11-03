@@ -1,4 +1,7 @@
-# dsh-pyforai
+# dsh-pyforai — DSH plugin for Python
+
+> **DSH插件 / DSH plugin for Python:** expose pyforai's Python structural
+> validation and structural editing as two native DSH tools.
 
 A Host-only DSH bundle that exposes the `pyforai` binary as two native tools:
 
@@ -26,7 +29,7 @@ command. Set `off` for maximum speed or `on` to require Python validation.
 
 ## Install
 
-From the `python-for-AI` repository:
+From the repository root:
 
 ```bash
 python3 -m pyforai ...          # or: make static
@@ -35,7 +38,7 @@ python3 -m pyforai ...          # or: make static
 Then install the bundle through DSH's plugin manager:
 
 ```text
-plugin_manager action=install_bundle target=/absolute/path/to/python-for-AI/dsh-plugin
+plugin_manager action=install_bundle target=/absolute/path/to/<repo>/dsh-plugin
 ```
 
 The source bundle is linked into the current profile; keep the checkout in
@@ -51,8 +54,8 @@ It tells the agent to:
 - use `pyforai_edit` for wrap / replace-body / move instead of hand-reindenting;
 - run `pyforai_check` after any Python write or edit.
 
-The section is always active while the plugin is enabled. In the controlled
-A/B/C bench, arm A and B carry an explicit override; arm C follows it.
+The section is always active while the plugin is enabled.  Evaluation arms can
+carry an explicit override; the default is to follow it.
 
 ## Reloading after a code change
 
